@@ -15,6 +15,11 @@ public class MainMenu : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("QUIT GAME!");
+
+        // exit play mode (when in unity editor)
+        UnityEditor.EditorApplication.isPlaying = false;
+
+        // exit game (when game is outside the unity editor)
         Application.Quit();
     }
 

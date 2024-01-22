@@ -56,6 +56,11 @@ public class PauseMenu : MonoBehaviour
     public void QuitGame()
     {
         Debug.Log("Quitting Game...");
+
+        // stop the play mode (when in unity editor)
+        UnityEditor.EditorApplication.isPlaying = false;
+        
+        // exit the game when running outside the unity editor
         Application.Quit();
 
     }
