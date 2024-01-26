@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Colonial City LittlePack/Colonial_Graveyard/Scenes/Colonial_graveyard.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 67dd887e4c68284469c22a1c2eeba825
+  - enabled: 1
+    path: Assets/Scenes/Town.unity
+    guid: 8b669c0f2119dfb4285971e316bccdfd
   m_configObjects: {}

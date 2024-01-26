@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.unity.ai.navigation": "1.1.5",
     "com.unity.cinemachine": "2.9.7",
     "com.unity.collab-proxy": "2.2.0",
     "com.unity.ide.rider": "3.0.26",
@@ -12,6 +13,7 @@
     "com.unity.render-pipelines.high-definition": "14.0.9",
     "com.unity.render-pipelines.universal": "14.0.9",
     "com.unity.shadergraph": "14.0.9",
+    "com.unity.splines": "2.5.2",
     "com.unity.test-framework": "1.1.33",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.7.6",
