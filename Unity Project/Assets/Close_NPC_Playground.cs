@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class Close_NPC_Playground : MonoBehaviour
@@ -8,8 +9,8 @@ public class Close_NPC_Playground : MonoBehaviour
     public string npcMessage = "Hello there, collect all the black objcts\n" +
         "located in the playground in order to solve the riddle!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
-    private TMPro.TextMeshProUGUI dialogueText;
-   
+    private TextMeshProUGUI dialogueText;
+
     void Start()
     {
         // Assuming the Text component is a child of the Canvas
