@@ -6,7 +6,7 @@ using TMPro;
 
 public class Close_NPC_Playground : MonoBehaviour
 {
-    public string npcMessage = "Hello there, collect all the black objcts\n" +
+    public string npcMessage = "Hello there, collect all the black objects\n" +
         "located in the playground in order to solve the riddle!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;

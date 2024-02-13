@@ -28,6 +28,19 @@ public class Close_Wheel_Playground : MonoBehaviour
         }
     }
 
+    IEnumerator HideObjectDelayed(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (BlackWheel != null)
+        {
+            BlackWheel.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("BlackWheel GameObject is not assigned.");
+        }
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -35,7 +48,8 @@ public class Close_Wheel_Playground : MonoBehaviour
             if (dialogueText != null)
             {
                 dialogueText.text = npcMessage;
-                BlackWheel.SetActive(false);
+                ScoreManager.instance.AddPointEasyMode();
+                StartCoroutine(HideObjectDelayed(3f)); // Delay for 3 seconds
             }
             else
             {

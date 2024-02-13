@@ -28,6 +28,19 @@ public class NewBehaviourScript : MonoBehaviour
         }
     }
 
+    IEnumerator HideObjectDelayed(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (BlackCar != null)
+        {
+            BlackCar.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("BlackCar GameObject is not assigned.");
+        }
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -35,7 +48,8 @@ public class NewBehaviourScript : MonoBehaviour
             if (dialogueText != null)
             {
                 dialogueText.text = npcMessage;
-                BlackCar.SetActive(false);
+                ScoreManager.instance.AddPointEasyMode();
+                StartCoroutine(HideObjectDelayed(3f)); // Delay for 3 seconds
             }
             else
             {

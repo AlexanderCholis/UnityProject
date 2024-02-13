@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
-
+    public Canvas canvas;
 
     // Update is called once per frame
     void Update()
@@ -17,7 +17,8 @@ public class PauseMenu : MonoBehaviour
             if (GameIsPaused)
             {
                 Resume();
-            } else
+            }
+            else
             {
                 Pause();
             }
@@ -30,6 +31,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = false;
 
         pauseMenuUI.SetActive(false);
+        canvas.enabled = false;
         Time.timeScale = 1f; // back to normal
         GameIsPaused = false;
     }
@@ -40,6 +42,7 @@ public class PauseMenu : MonoBehaviour
         Cursor.visible = true;
 
         pauseMenuUI.SetActive(true);
+        canvas.enabled = true;
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
@@ -49,8 +52,6 @@ public class PauseMenu : MonoBehaviour
         //Debug.Log("Loading Menu...");
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
-
-
     }
 
     public void QuitGame()
@@ -59,9 +60,8 @@ public class PauseMenu : MonoBehaviour
 
         // stop the play mode (when in unity editor)
         UnityEditor.EditorApplication.isPlaying = false;
-        
+
         // exit the game when running outside the unity editor
         Application.Quit();
-
     }
 }
