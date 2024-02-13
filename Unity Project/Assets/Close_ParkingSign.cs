@@ -13,6 +13,7 @@ public class Close_ParkingSign : MonoBehaviour
     private TextMeshProUGUI dialogueText;
 
     public TextMeshProUGUI scoreText;
+
     public GameObject ParkingSign;
 
     private string[] parts; // Define the parts array here
@@ -38,7 +39,7 @@ public class Close_ParkingSign : MonoBehaviour
             if (parts.Length > 0)
             {
                 string numberPart = parts[0]; // Get the first part
-                print("Score Number: " + numberPart);
+                //print("Score Number: " + numberPart);
             }
             else
             {
@@ -68,8 +69,8 @@ public class Close_ParkingSign : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            print("Score: "+ parts[0]);
-            if (parts != null && parts.Length > 0 && parts[0] == "3") // Check if parts is not null and has elements
+            //print("Score: "+ parts[0]);
+            if (ScoreManager.instance.score == 3) // Check if parts is not null and has elements
             {
                 if (dialogueText != null)
                 {
@@ -86,7 +87,7 @@ public class Close_ParkingSign : MonoBehaviour
             }
             else
             {
-                Debug.LogError("Score is not 3!");
+                Debug.LogError("Score is not 3!\nCurrent score: " + ScoreManager.instance.score);
             }
         }
         else
