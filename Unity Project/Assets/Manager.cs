@@ -10,9 +10,9 @@ public class Manager : MonoBehaviour
 
     public void correctAnswer()
     {
-        if (currentLevel + 1 != Levels.Length)
+        if (currentLevel < Levels.Length - 1)
         {
-            Levels[currentLevel].SetActive(false); 
+            Levels[currentLevel].SetActive(false);
             currentLevel++;
             Levels[currentLevel].SetActive(true);
         }
