@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class WomanStandingParkScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public QuizManager quizManager; // Reference to the QuizManager script
+
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            // Assuming the quizManager has a method to start the quiz
+            quizManager.StartQuiz();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            quizManager.EndQuiz();
+        }
     }
+
 }

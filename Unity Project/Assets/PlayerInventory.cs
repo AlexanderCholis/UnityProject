@@ -18,4 +18,5 @@ public class PlayerInventory : MonoBehaviour
         NumberOfDiamonds++;
         onDiamondCollected.Invoke(this);
     }
+
 }
