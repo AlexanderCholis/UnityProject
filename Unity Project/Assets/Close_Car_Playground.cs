@@ -6,7 +6,7 @@ using TMPro;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public string npcMessage = "You found one black object, keep going!";
+    public string npcMessage = "You found the car, keep going!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 

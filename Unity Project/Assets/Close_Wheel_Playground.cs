@@ -6,7 +6,7 @@ using TMPro;
 
 public class Close_Wheel_Playground : MonoBehaviour
 {
-    public string npcMessage = "You found one black object, keep going!";
+    public string npcMessage = "You found the wheel, keep going!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 

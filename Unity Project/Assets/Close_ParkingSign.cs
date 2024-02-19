@@ -6,8 +6,7 @@ using TMPro;
 
 public class Close_ParkingSign : MonoBehaviour
 {
-    public string npcMessage = "ΗΙΝΤ: In which part of the city are you most likely\n" +
-        "to find these objects?"; // Corrected typo in "Hint"
+    public string npcMessage = "You found the parking sign, keep going!"; // Corrected typo in "Hint"
 
     public Canvas dialogueCanvas;
     private TextMeshProUGUI dialogueText;
@@ -31,7 +30,7 @@ public class Close_ParkingSign : MonoBehaviour
             dialogueCanvas.enabled = false;
         }
 
-        if (scoreText != null)
+       /* if (scoreText != null)
         {
             // Split the score text and store the parts in the array
             parts = scoreText.text.Split(' ');
@@ -49,7 +48,7 @@ public class Close_ParkingSign : MonoBehaviour
         else
         {
             Debug.LogError("Score text is not assigned!");
-        }
+        }*/
     }
 
     IEnumerator HideObjectDelayed(float delay)
@@ -70,8 +69,8 @@ public class Close_ParkingSign : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             //print("Score: "+ parts[0]);
-            if (ScoreManager.instance.score == 3) // Check if parts is not null and has elements
-            {
+           /* if (ScoreManager.instance.score == 3) // Check if parts is not null and has elements
+            {*/
                 if (dialogueText != null)
                 {
                     dialogueText.text = npcMessage;
@@ -84,17 +83,17 @@ public class Close_ParkingSign : MonoBehaviour
                 }
 
                 dialogueCanvas.enabled = true;
-            }
-            else
+        }
+            /*else
             {
                 Debug.LogError("Score is not 3!\nCurrent score: " + ScoreManager.instance.score);
-            }
-        }
+            }*/
         else
         {
             Debug.LogError("Error on trigger enter");
         }
     }
+
 
     void OnTriggerExit(Collider other)
     {
