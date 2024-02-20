@@ -37,7 +37,7 @@ public class QuizManager : MonoBehaviour
     {
         Quizpanel.SetActive(false);
         BG.SetActive(true);
-        ScoreText.text = "YOUR SCORE IN PARK'S QUIZ: \n" + score + " / " + totalQuestions + " \n Press ESC and Step Away to leave this Quiz.";
+        ScoreText.text = "YOUR SCORE IN PARK'S QUIZ: \n" + score + " / " + totalQuestions + " \n Step Away to leave this Quiz.";
     }
 
 

@@ -5,12 +5,16 @@ using TMPro;
 
 public class InventoryUI : MonoBehaviour
 {
-    private TextMeshProUGUI diamondText; 
+    private TextMeshProUGUI diamondText;
+    public string Message = "You've collected all diamonds! The residents of this city are 49.\n" +
+        "Your next mission is to find the lady who is around the perimeter of the park, she will talk to you when you get next to her.";
+    private TextMeshProUGUI missionText;
 
     // Start is called before the first frame update
     void Start()
     {
         diamondText = GetComponent<TextMeshProUGUI>();
+        missionText = GetComponent<TextMeshProUGUI>();
     }
 
     public void UpdateDiamondText(PlayerInventory playerInventory)
@@ -19,13 +23,14 @@ public class InventoryUI : MonoBehaviour
 
         if (playerInventory.NumberOfDiamonds == 49)
         {
-            ShowCompletionMessage();
+            ShowMessage();
         }
     }
 
-    private void ShowCompletionMessage()
+    // Corrected method declaration
+    private void ShowMessage()
     {
-        // You can replace this with your own logic to show a message on the screen
         Debug.Log("You've collected all diamonds! The residents of this city are 49.");
+        missionText.text = Message;
     }
 }

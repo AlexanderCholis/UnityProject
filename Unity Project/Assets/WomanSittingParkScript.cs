@@ -8,9 +8,14 @@ public class WomanSittingParkScript : MonoBehaviour
 
 {
 
-    public string npcMessage = "Welcome to the park! Your first mission is to collect all the diamonds arounr the park, so you can answer this question: how many are the residents of the city? ";
+    public string npcMessage = "Welcome to the park! \n" +
+        "Your first mission is to collect all the diamonds around the park,\n" +
+        "so you can answer this question:\n" +
+        "How many are the residents of the city? ";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
+    public GameObject Gems;
+    public GameObject CanvasGems;
 
     void Start()
     {
@@ -35,6 +40,8 @@ public class WomanSittingParkScript : MonoBehaviour
             if (dialogueText != null)
             {
                 dialogueText.text = npcMessage;
+                Gems.SetActive(true);
+                CanvasGems.SetActive(true);
             }
             else
             {
