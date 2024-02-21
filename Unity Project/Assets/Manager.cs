@@ -7,16 +7,19 @@ public class Manager : MonoBehaviour
 {
     public GameObject[] Levels;
 
+    public Text ScoreText;
+
     int currentLevel;
 
-    int score = 0;
+    public int Score;
 
     public void correctAnswer()
     {
         if (currentLevel + 1 != Levels.Length)
         {
             Levels[currentLevel].SetActive(false);
-            score++;
+            Score++;
+            //score += 1;
             currentLevel++;
             Levels[currentLevel].SetActive(true);
         }
@@ -31,5 +34,11 @@ public class Manager : MonoBehaviour
             Levels[currentLevel].SetActive(true);
         }
     }
+
+    public void GameOver() 
+    {
+        ScoreText.text = "YOUR SCORE IN PARKING'S QUIZ: \n" + Score + " \n Step Away to end the Quiz or Press Exit to go in the center of the city";
+    }
+
 
 }
