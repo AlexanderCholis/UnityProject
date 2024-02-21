@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
@@ -19,7 +20,6 @@ public class Manager : MonoBehaviour
         {
             Levels[currentLevel].SetActive(false);
             Score++;
-            //score += 1;
             currentLevel++;
             Levels[currentLevel].SetActive(true);
         }
@@ -33,6 +33,25 @@ public class Manager : MonoBehaviour
             currentLevel++;
             Levels[currentLevel].SetActive(true);
         }
+    }
+
+    public void StartQuiz()
+    {
+        // Activate the first level
+        Levels[0].SetActive(false);
+
+        Levels[1].SetActive(true);
+        Levels[2].SetActive(true);
+        Levels[3].SetActive(true);
+        Levels[4].SetActive(true);
+        //Levels[5].SetActive(true);
+
+        // Deactivate the intro page or any other UI elements
+        //gameObject.SetActive(false); // Assuming the Manager is attached to the intro page GameObject
+
+        // Initialize score and currentLevel
+        Score = 0;
+        currentLevel = 0;
     }
 
     public void GameOver() 
