@@ -4,21 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class Close_NPC_Playground : MonoBehaviour
-{
-    public string npcMessage = "Hello there, you are located in the playground park. Your\n"+
-        "mission is to collect 3 black objects and one traffic sign that are scattered in the\n"+
-        "park in order to continue to your next riddle, located in\n"+
-        "the parking garage. Good luck!";
 
+public class Close_Rock_Playground_Hard : MonoBehaviour
+{
+    public string npcMessage = "You found the rock, keep going!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
+
+    public GameObject RedRock;
 
     void Start()
     {
         // Assuming the Text component is a child of the Canvas
         //dialogueText = dialogueCanvas.GetComponentInChildren<Text>();
-        dialogueText = dialogueCanvas.transform.Find("Text1").GetComponent<TextMeshProUGUI>();
+        dialogueText = dialogueCanvas.transform.Find("Text").GetComponent<TextMeshProUGUI>();
 
         if (dialogueText == null)
         {
@@ -28,7 +27,19 @@ public class Close_NPC_Playground : MonoBehaviour
         {
             dialogueCanvas.enabled = false;
         }
+    }
 
+    IEnumerator HideObjectDelayed(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        if (RedRock != null)
+        {
+            RedRock.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("RedRock GameObject is not assigned.");
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -38,6 +49,8 @@ public class Close_NPC_Playground : MonoBehaviour
             if (dialogueText != null)
             {
                 dialogueText.text = npcMessage;
+                ScoreManager.instance.AddPointEasyMode();
+                StartCoroutine(HideObjectDelayed(3f)); // Delay for 3 seconds
             }
             else
             {
@@ -64,3 +77,4 @@ public class Close_NPC_Playground : MonoBehaviour
         }
     }
 }
+
