@@ -44,7 +44,12 @@ public class Manager : MonoBehaviour
         Levels[2].SetActive(true);
         Levels[3].SetActive(true);
         Levels[4].SetActive(true);
-        //Levels[5].SetActive(true);
+        Levels[5].SetActive(true);
+        Levels[5].SetActive(true);
+        Levels[6].SetActive(true);
+        Levels[7].SetActive(true);
+        Levels[8].SetActive(true);
+
 
         // Deactivate the intro page or any other UI elements
         //gameObject.SetActive(false); // Assuming the Manager is attached to the intro page GameObject
@@ -56,7 +61,7 @@ public class Manager : MonoBehaviour
 
     public void GameOver() 
     {
-        ScoreText.text = "YOUR SCORE IN PARKING'S QUIZ: \n" + Score + " \n Step Away to end the Quiz or Press Exit to go in the center of the city";
+        ScoreText.text = "YOUR SCORE IN PARKING'S QUIZ: \n" + Score + "/8" + " \n Step Away to end the Quiz and continue to level 3 in the main park";
     }
 
 
