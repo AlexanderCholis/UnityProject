@@ -8,11 +8,27 @@ public class Close_NPC_Playground : MonoBehaviour
 {
     public string npcMessage = "Hello there, you are located in the playground park. Your\n"+
         "mission is to collect 3 black objects and one traffic sign that are scattered in the\n"+
-        "park in order to continue to your next riddle, located in\n"+
-        "the parking garage. Good luck!";
+        "park in order to continue to your next riddle. Good luck!";
 
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
+
+    // hide the medium and hard mode objects
+    
+    // hide medium mode objects
+    public GameObject BlackWheel1;
+    public GameObject BlackPillow;
+    public GameObject BlackDonut;
+    public GameObject BlackRock;
+
+    // hide hard mode objects
+    public GameObject RedCar;
+    public GameObject RedRock;
+    public GameObject RedWineGlass;
+    public GameObject RedCupcake;
+    public GameObject RedFlower;
+
+
 
     void Start()
     {
@@ -27,6 +43,25 @@ public class Close_NPC_Playground : MonoBehaviour
         else
         {
             dialogueCanvas.enabled = false;
+        }
+
+        if (RedCar != null && RedRock != null &&RedWineGlass != null && RedCupcake != null && RedFlower != null
+            && BlackWheel1 != null && BlackPillow != null && BlackDonut != null && BlackRock != null)
+        {
+            RedCar.SetActive(false);
+            RedRock.SetActive(false);
+            RedWineGlass.SetActive(false);
+            RedCupcake.SetActive(false);
+            RedFlower.SetActive(false);
+
+            BlackWheel1.SetActive(false);
+            BlackPillow.SetActive(false);
+            BlackDonut.SetActive(false);
+            BlackRock.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("Some of your objects  is/are not assigned.");
         }
 
     }

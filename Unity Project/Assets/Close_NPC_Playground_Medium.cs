@@ -8,8 +8,7 @@ public class Close_NPC_Playground_Medium : MonoBehaviour
 {
     public string npcMessage = "Hello there, you are located in the playground park. Your\n" +
         "mission is to collect 4 black objects that are scattered in the\n" +
-        "park in order to continue to your next riddle, located in\n" +
-        "the parking garage. Good luck!";
+        "park in order to continue to your next riddle. Good luck!";
 
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
