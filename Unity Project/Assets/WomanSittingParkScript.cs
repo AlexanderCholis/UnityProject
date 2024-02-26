@@ -15,7 +15,6 @@ public class WomanSittingParkScript : MonoBehaviour
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
     public GameObject Gems;
-    public GameObject CanvasGems;
 
     void Start()
     {
@@ -41,7 +40,6 @@ public class WomanSittingParkScript : MonoBehaviour
             {
                 dialogueText.text = npcMessage;
                 Gems.SetActive(true);
-                CanvasGems.SetActive(true);
             }
             else
             {

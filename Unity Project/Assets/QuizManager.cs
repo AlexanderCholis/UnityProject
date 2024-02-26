@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class QuizManager : MonoBehaviour
 {
     public List<QuestionAndAnswers> QnA;
     public GameObject[] options;
-    public int currentQuestion;
+    private int currentQuestionIndex;
 
     public GameObject Quizpanel;
     public GameObject BG;
@@ -23,7 +22,8 @@ public class QuizManager : MonoBehaviour
     {
         Quizpanel.SetActive(true);
         totalQuestions = QnA.Count;
-        BG.SetActive(false);    
+        BG.SetActive(false);
+        currentQuestionIndex = 0; // Start from the first question
         generateQuestion();
     }
 
@@ -32,7 +32,6 @@ public class QuizManager : MonoBehaviour
         BG.SetActive(false);
     }
 
-
     void GameOver()
     {
         Quizpanel.SetActive(false);
@@ -40,44 +39,38 @@ public class QuizManager : MonoBehaviour
         ScoreText.text = "YOUR SCORE IN PARK'S QUIZ: \n" + score + " / " + totalQuestions + " \n Step Away to leave this Quiz.";
     }
 
-
     public void correct()
     {
         score += 1;
-        QnA.RemoveAt(currentQuestion);
+        currentQuestionIndex++;
         generateQuestion();
     }
 
     public void wrong()
     {
-        QnA.RemoveAt(currentQuestion);
+        currentQuestionIndex++;
         generateQuestion();
     }
-
 
     void SetAnswers()
     {
         for (int i = 0; i < options.Length; i++)
         {
             options[i].GetComponent<AnswerScript>().isCorrect = false;
-            options[i].transform.GetChild(0).GetComponent<Text>().text = QnA[currentQuestion].Answers[i];
+            options[i].transform.GetChild(0).GetComponent<Text>().text = QnA[currentQuestionIndex].Answers[i];
 
-            if (QnA[currentQuestion].CorrectAnswer == i + 1)
+            if (QnA[currentQuestionIndex].CorrectAnswer == i + 1)
             {
                 options[i].GetComponent<AnswerScript>().isCorrect = true;
             }
         }
-
     }
 
     void generateQuestion()
     {
-        if (QnA.Count > 0)
+        if (currentQuestionIndex < QnA.Count)
         {
-            currentQuestion = Random.Range(0, QnA.Count);
-
-            QuestionText.text = QnA[currentQuestion].Question;
-
+            QuestionText.text = QnA[currentQuestionIndex].Question;
             SetAnswers();
         }
         else
@@ -87,4 +80,3 @@ public class QuizManager : MonoBehaviour
         }
     }
 }
-
