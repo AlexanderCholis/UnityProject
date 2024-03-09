@@ -13,17 +13,21 @@ public class Close_NPC_Playground_Medium : MonoBehaviour
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 
-    // hide the easy mode objects
-    public GameObject BlackWheel;
-    public GameObject BlackCar;
-    public GameObject BlackHammer;
-    public GameObject ParkingSign;
+    // hide the medium mode objects
+    public GameObject BlackGun;
+    public GameObject RustyKnife;
+    public GameObject GunCase;
+    public GameObject Snipper;
+    public GameObject CombatKnife;
+
+    // Player object to hide from medium mode
+    public GameObject TerrifiedWoman;
 
     void Start()
     {
         // Assuming the Text component is a child of the Canvas
         //dialogueText = dialogueCanvas.GetComponentInChildren<Text>();
-        dialogueText = dialogueCanvas.transform.Find("Text1").GetComponent<TextMeshProUGUI>();
+        dialogueText = dialogueCanvas.transform.Find("Text").GetComponent<TextMeshProUGUI>();
 
         if (dialogueText == null)
         {
@@ -34,12 +38,15 @@ public class Close_NPC_Playground_Medium : MonoBehaviour
             dialogueCanvas.enabled = false;
         }
 
-        if (BlackWheel != null && BlackCar != null && BlackHammer != null && ParkingSign != null)
+        if (BlackGun != null && RustyKnife != null && GunCase != null && Snipper != null && CombatKnife != null
+            && TerrifiedWoman != null)
         {
-            BlackWheel.SetActive(false);
-            BlackCar.SetActive(false);
-            BlackHammer.SetActive(false);
-            ParkingSign.SetActive(false);
+            BlackGun.SetActive(false);
+            RustyKnife.SetActive(false);
+            GunCase.SetActive(false);
+            Snipper.SetActive(false);
+            CombatKnife.SetActive(false);
+            TerrifiedWoman.SetActive(false);
         }
         else
         {
