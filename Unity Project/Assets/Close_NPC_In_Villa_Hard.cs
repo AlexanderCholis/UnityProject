@@ -8,11 +8,22 @@ public class Close_NPC_In_Villa_Hard : MonoBehaviour
 {
     public string npcMessage = "Hello there, you have been assigned a very important role.\n" +
       "You are a detective investigating a murder case. Search the house and collect the" +
-      " \n7 objects that incriminate him.The objects are scattered in the different areas" +
+      " \n6 objects that incriminate him.The objects are scattered in the different areas" +
       "of the house.\nHint: We have testimonies that there may be a female captive.\nBe careful and good luck";
 
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
+
+    // hide medium mode objects
+    public GameObject BlackGun;
+    public GameObject RustyKnife;
+    public GameObject GunCase;
+    public GameObject Snipper;
+    public GameObject Sight;
+    public GameObject CombatKnife;
+
+    // Player object to hide from medium mode
+    public GameObject TerrifiedWoman;
 
     void Start()
     {
@@ -27,6 +38,22 @@ public class Close_NPC_In_Villa_Hard : MonoBehaviour
         else
         {
             dialogueCanvas.enabled = false;
+        }
+
+        if (BlackGun != null && RustyKnife  != null && GunCase != null && Snipper != null
+            && Sight != null && CombatKnife != null && TerrifiedWoman != null)
+        {
+            BlackGun.SetActive(false);
+            RustyKnife.SetActive(false);
+            GunCase.SetActive(false);
+            Snipper.SetActive(false);
+            Sight.SetActive(false);
+            CombatKnife.SetActive(false);
+            TerrifiedWoman.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("Some of your objects  is not assigned.");
         }
 
     }

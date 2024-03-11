@@ -14,6 +14,20 @@ public class Close_Player_In_Villa : MonoBehaviour
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 
+    // hide the hard mode objects
+    public GameObject Axe;
+    public GameObject Gun;
+    public GameObject Bullets;
+    public GameObject Pistol;
+    public GameObject Knife;
+    public GameObject GunCase;
+    public GameObject ShotGun;
+
+    // Player object to hide from hard mode
+    public GameObject TerrifiedWoman;
+
+
+
     void Start()
     {
         // Assuming the Text component is a child of the Canvas
@@ -27,6 +41,23 @@ public class Close_Player_In_Villa : MonoBehaviour
         else
         {
             dialogueCanvas.enabled = false;
+        }
+
+        if (Axe != null && Gun != null && Bullets != null && Pistol != null
+           && Knife != null && GunCase != null && ShotGun != null && TerrifiedWoman != null)
+        {
+            Axe.SetActive(false);
+            Gun.SetActive(false);
+            Bullets.SetActive(false);
+            Pistol.SetActive(false);
+            Knife.SetActive(false);
+            GunCase.SetActive(false);
+            ShotGun.SetActive(false);
+            TerrifiedWoman.SetActive(false);
+        }
+        else
+        {
+            Debug.LogError("Some of your objects  is not assigned.");
         }
 
     }
