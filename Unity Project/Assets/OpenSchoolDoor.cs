@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class OpenSchoolDoor : MonoBehaviour
 {
     private Animator anim;
     private bool isAtDoor = false;
 
-    [SerializeField] private TextMeshProGUI CodeText;
+    [SerializeField] private TextMeshProUGUI CodeText;
     string codeTextValue = "";
     public string safeCode;
     public GameObject CodePanel;
@@ -21,7 +22,23 @@ public class OpenSchoolDoor : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        CodeText.text = codeTextValue;
+
+        if (codeTextValue == safeCode)
+        {
+            anim.SetTrigger("OpenSchoolDoor");
+            CodePanel.SetActive(false);
+        }
+
+        if(codeTextValue.Length >= 4)
+        {
+            codeTextValue = "";
+        }
+
+        if (Input.GetKey(KeyCode.E) && isAtDoor == true)
+        {
+            CodePanel.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
