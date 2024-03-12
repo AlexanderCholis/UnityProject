@@ -26,7 +26,7 @@ public class OpenSchoolDoor : MonoBehaviour
 
         if (codeTextValue == safeCode)
         {
-            anim.SetTrigger("OpenSchoolDoor");
+            anim.SetTrigger("OpenDoor");
             CodePanel.SetActive(false);
         }
 
@@ -35,7 +35,7 @@ public class OpenSchoolDoor : MonoBehaviour
             codeTextValue = "";
         }
 
-        if (Input.GetKey(KeyCode.E) && isAtDoor == true)
+        if (Input.GetKey(KeyCode.K) && isAtDoor == true)
         {
             CodePanel.SetActive(true);
         }
