@@ -23,6 +23,8 @@ public class Close_Player_In_Villa : MonoBehaviour
     public GameObject GunCase;
     public GameObject ShotGun;
 
+    public GameObject RustyKnife;
+
     // Player object to hide from hard mode
     public GameObject TerrifiedWoman;
 
@@ -44,7 +46,7 @@ public class Close_Player_In_Villa : MonoBehaviour
         }
 
         if (Axe != null && Gun != null && Bullets != null && Pistol != null
-           && Knife != null && GunCase != null && ShotGun != null && TerrifiedWoman != null)
+           && Knife != null && GunCase != null && ShotGun != null && TerrifiedWoman != null && RustyKnife != null)
         {
             Axe.SetActive(false);
             Gun.SetActive(false);
@@ -54,6 +56,7 @@ public class Close_Player_In_Villa : MonoBehaviour
             GunCase.SetActive(false);
             ShotGun.SetActive(false);
             TerrifiedWoman.SetActive(false);
+            RustyKnife.SetActive(false);
         }
         else
         {
