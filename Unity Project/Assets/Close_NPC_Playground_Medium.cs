@@ -13,15 +13,19 @@ public class Close_NPC_Playground_Medium : MonoBehaviour
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 
-    // hide the medium mode objects
-    public GameObject BlackGun;
-    public GameObject RustyKnife;
-    public GameObject GunCase;
-    public GameObject Snipper;
-    public GameObject CombatKnife;
+    // hide the easy mode objects
+    public GameObject BlackCar;
+    public GameObject BlackWheel;
+    public GameObject BlackHammer;
+    public GameObject ParkGarageSign;
+  
 
-    // Player object to hide from medium mode
-    public GameObject TerrifiedWoman;
+    // hide the hard mode objects
+    public GameObject RedCar;
+    public GameObject RedRock;
+    public GameObject RedCupcake;
+    public GameObject RedWineGlass;
+    public GameObject RedFlower;
 
     void Start()
     {
@@ -38,15 +42,20 @@ public class Close_NPC_Playground_Medium : MonoBehaviour
             dialogueCanvas.enabled = false;
         }
 
-        if (BlackGun != null && RustyKnife != null && GunCase != null && Snipper != null && CombatKnife != null
-            && TerrifiedWoman != null)
+        if (BlackCar != null && BlackWheel != null && BlackHammer != null && ParkGarageSign != null &&
+            RedCar != null && RedRock != null && RedCupcake != null && RedWineGlass != null && RedFlower != null)
         {
-            BlackGun.SetActive(false);
-            RustyKnife.SetActive(false);
-            GunCase.SetActive(false);
-            Snipper.SetActive(false);
-            CombatKnife.SetActive(false);
-            TerrifiedWoman.SetActive(false);
+            BlackCar.SetActive(false);
+            BlackWheel.SetActive(false);
+            BlackHammer.SetActive(false);
+            ParkGarageSign.SetActive(false);
+
+            RedCar.SetActive(false);
+            RedRock.SetActive(false);
+            RedCupcake.SetActive(false);
+            RedWineGlass.SetActive(false);
+            RedFlower.SetActive(false);
+
         }
         else
         {
