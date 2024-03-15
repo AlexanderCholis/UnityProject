@@ -81,6 +81,7 @@ public class Close_Wheel_Playground : MonoBehaviour
     }
 
     // Check the score and display a message when it reaches 3
+    /*
     void Update()
     {
         if (scoreText != null)
@@ -121,5 +122,5 @@ public class Close_Wheel_Playground : MonoBehaviour
         yield return new WaitForSeconds(3f); // Wait for 3 seconds
 
         dialogueCanvas.enabled = false; // Hide the dialogue canvas
-    }
+    }*/
 }

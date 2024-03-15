@@ -82,7 +82,7 @@ public class Close_Hammer_Playground : MonoBehaviour
     }
 
     // Check the score and display a message when it reaches 3
-    void Update()
+    /*void Update()
     {
         if (scoreText != null)
         {
@@ -108,7 +108,7 @@ public class Close_Hammer_Playground : MonoBehaviour
         {
             StartCoroutine(ShowDialogueAfterDelay(2f));
         }
-    }
+    }*/
 
 
     IEnumerator ShowDialogueAfterDelay(float delay)
