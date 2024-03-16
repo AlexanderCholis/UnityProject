@@ -109,7 +109,7 @@ public class Close_ParkingSign : MonoBehaviour
     }
 
     // Check the score and display a message when it reaches 3
-    /*void Update()
+   /* void Update()
     {
         if (scoreText != null)
         {
@@ -135,7 +135,7 @@ public class Close_ParkingSign : MonoBehaviour
         {
             StartCoroutine(ShowDialogueAfterDelay(2f));
         }
-    }*/
+    }
 
 
     IEnumerator ShowDialogueAfterDelay(float delay)
@@ -146,8 +146,8 @@ public class Close_ParkingSign : MonoBehaviour
             "\n located in the parking garage!";
         dialogueCanvas.enabled = true;
 
-        yield return new WaitForSeconds(3f); // Wait for 3 seconds
+        yield return new WaitForSeconds(4f); // Wait for 3 seconds
 
         dialogueCanvas.enabled = false; // Hide the dialogue canvas
-    }
+    }*/
 }

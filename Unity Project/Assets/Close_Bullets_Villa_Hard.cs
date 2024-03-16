@@ -12,6 +12,8 @@ public class Close_Bullets_Villa_Hard : MonoBehaviour
 
     public GameObject Bullets;
 
+    public static bool bulletsflag = false;
+
     void Start()
     {
         // Assuming the Text component is a child of the Canvas
@@ -49,6 +51,9 @@ public class Close_Bullets_Villa_Hard : MonoBehaviour
             {
                 dialogueText.text = npcMessage;
                 ScoreManager.instance.AddPointEasyMode();
+
+                bulletsflag = true;
+
                 StartCoroutine(HideObjectDelayed(3f)); // Delay for 3 seconds
             }
             else
@@ -75,5 +80,31 @@ public class Close_Bullets_Villa_Hard : MonoBehaviour
             Debug.LogError("Error on trigger exit");
         }
     }
+
+    /*IEnumerator ShowDialogueAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        dialogueText.text = "Congratulations! You found all the hidden objects.\n" +
+            "You can now continue to your next mission" +
+            "\n located in the parking garage!";
+        dialogueCanvas.enabled = true;
+
+        yield return new WaitForSeconds(4f); // Wait for 3 seconds
+
+        dialogueCanvas.enabled = false; // Hide the dialogue canvas
+    }
+
+    void Update()
+    {
+        if (Close_Axe_Villa_Hard.axeflag && Close_Gun_Villa_Hard.gunflag && Close_Bullets_Villa_Hard.bulletsflag
+            && Close_Pistol_Villa_Hard.pistolflag && Close_Knife_Villa_Hard.knifeflag
+            && Close_GunCase_Villa_Hard.guncaseflag && Close_ShotGun_Villa_Hard.shotgunflag
+            && Close_TerrifiedWoman_Villa_Hard.womanflag && Close_TrashKnife_Villa_Hard.knifeflag)
+        {
+            Debug.Log("All easy mode hidden!!!!!");
+            StartCoroutine(ShowDialogueAfterDelay(2f));
+        }
+    }*/
 }
 

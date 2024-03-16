@@ -17,6 +17,8 @@ public class ScoreManager : MonoBehaviour
     // Define keys for PlayerPrefs
     private const string HighScoreKey = "HighScore";
 
+   
+
     // Variable to store the selected game mode
     //public static int highScore;
 

@@ -117,7 +117,7 @@ public class NewBehaviourScript : MonoBehaviour
     }*/
 
 
-    IEnumerator ShowDialogueAfterDelay(float delay)
+    /*IEnumerator ShowDialogueAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
 
@@ -126,7 +126,7 @@ public class NewBehaviourScript : MonoBehaviour
             "\n located in the parking garage!";
         dialogueCanvas.enabled = true;
 
-        yield return new WaitForSeconds(3f); // Wait for 3 seconds
+        yield return new WaitForSeconds(4f); // Wait for 3 seconds
 
         dialogueCanvas.enabled = false; // Hide the dialogue canvas
     }
@@ -154,12 +154,17 @@ public class NewBehaviourScript : MonoBehaviour
         }
 
         if (!BlackCar.activeSelf && !BlackWheel.activeSelf && !BlackSledgeHammer.activeSelf &&
-            !Parkgarage_sign.activeSelf && numberPart != "0")
-        {
+            !Parkgarage_sign.activeSelf)
+            Debug.Log("All easy mode hidden!!!!!");
 
-            StartCoroutine(ShowDialogueAfterDelay(2f));
+
+        if (/*!BlackCar.activeSelf && !BlackWheel.activeSelf && !BlackSledgeHammer.activeSelf &&
+            !Parkgarage_sign.activeSelf && numberPart == "4")
+        {
+            Debug.Log("All easy mode hidden" + numberPart);
+            StartCoroutine(ShowDialogueAfterDelay(2f));*/
             //dialogueText.text = "You found all the hidden objects";
             //dialogueCanvas.enabled = true;
-        }
-    }
+       // }
+   // }*/
 }

@@ -16,6 +16,8 @@ public class Close_Gun_Villa : MonoBehaviour
     public int totalHiddenObjects = 1;  // include terrified woman too
     public int hiddenObjectCount = 0; // Counter for hidden objects
 
+    public static bool gunflag = false;
+
 
     void Start()
     {
@@ -39,11 +41,12 @@ public class Close_Gun_Villa : MonoBehaviour
         yield return new WaitForSeconds(delay);
         if (BlackGun != null)
         {
-           
+
             //hiddenObjectCount++;  // Increment the count when object is hidden
             //CheckHiddenObjects(); // Check if all objects are hidden
-            
+
             BlackGun.SetActive(false);
+            gunflag = true;
         }
         else
         {
@@ -51,7 +54,7 @@ public class Close_Gun_Villa : MonoBehaviour
         }
     }
 
-    void HideObject()
+    /*void HideObject()
     {
         if (BlackGun != null)
         {
@@ -65,16 +68,16 @@ public class Close_Gun_Villa : MonoBehaviour
         {
             Debug.LogError("BlackGun GameObject is not assigned.");
         }
+    }*/
 
-    }
-
-    IEnumerator CheckHiddenObjects(float delay)
+    /*IEnumerator CheckHiddenObjects(float delay)
     {
         yield return new WaitForSeconds(delay);
         if (BlackGun != null)
         {
             if (hiddenObjectCount == totalHiddenObjects)
             {
+                Debug.Log("hidden!!!!!");
                 // Show the dialogue message
                 if (dialogueText != null)
                 {
@@ -94,7 +97,7 @@ public class Close_Gun_Villa : MonoBehaviour
         {
             Debug.LogError("BlackGun GameObject is not assigned.");
         }
-    }
+    }*/
 
 
     void OnTriggerEnter(Collider other)
@@ -106,10 +109,12 @@ public class Close_Gun_Villa : MonoBehaviour
                 dialogueText.text = npcMessage;
                 ScoreManager.instance.AddPointEasyMode();
 
-                hiddenObjectCount++;  // Increment the count when object is hidden
-                HideObject();
+                //gunflag = true;
 
-                StartCoroutine(CheckHiddenObjects(3f)); // Check if all objects are hidden
+                //hiddenObjectCount = hiddenObjectCount + 1;  // Increment the count when object is hidden
+                //HideObject();
+
+                StartCoroutine(HideObjectDelayed(3f)); // Delay for 3 seconds
             }
             else
             {
@@ -135,5 +140,31 @@ public class Close_Gun_Villa : MonoBehaviour
             Debug.LogError("Error on trigger exit");
         }
     }
+
+    /*IEnumerator ShowDialogueAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        dialogueText.text = "Congratulations! You found all the hidden objects.\n" +
+            "You can now continue to your next mission" +
+            "\n located in the parking garage!";
+        dialogueCanvas.enabled = true;
+
+        yield return new WaitForSeconds(4f); // Wait for 3 seconds
+
+        dialogueCanvas.enabled = false; // Hide the dialogue canvas
+    }
+
+    void Update()
+    {
+        if (gunflag && Close_KitchenKnife_Villa_Medium.rustyknifeflag
+           && Close_GunCase_Villa_Medium.guncaseflag && Close_Snipper_Villa_Medium.sniperflag
+           && Close_Sight_Villa_Medium.sightflag && Close_CombatKnife_Villa_Medium.combatknifeflag
+           && Close_Terrified_Woman_Villa_Medium.womanflag)
+        {
+            Debug.Log("All easy mode hidden!!!!!");
+            StartCoroutine(ShowDialogueAfterDelay(2f));
+        }
+    }*/
 
 }

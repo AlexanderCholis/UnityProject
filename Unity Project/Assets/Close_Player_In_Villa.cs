@@ -47,6 +47,8 @@ public class Close_Player_In_Villa : MonoBehaviour
 
     private const string GameModeKey = "GameMode";
 
+    public static bool mission = false;
+
 
     void Start()
     {
@@ -119,6 +121,30 @@ public class Close_Player_In_Villa : MonoBehaviour
             RustyKnife1.SetActive(false);
 
         }
+        else if (selectedGameMode == "HARD")
+        {
+            // show hard objects, hide mefium ones
+
+            // show hard
+            Axe.SetActive(true);
+            Gun.SetActive(true);
+            Bullets.SetActive(true);
+            Pistol.SetActive(true);
+            Knife.SetActive(true);
+            GunCase1.SetActive(true);
+            ShotGun.SetActive(true);
+            TerrifiedWoman1.SetActive(true);
+            RustyKnife1.SetActive(true);
+
+            // hide medium
+            BlackGun.SetActive(false);
+            RustyKnife.SetActive(false);
+            GunCase.SetActive(false);
+            Sniper.SetActive(false);
+            Sight.SetActive(false);
+            CombatKnife.SetActive(false);
+            WomanTerrified.SetActive(false);
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -128,11 +154,20 @@ public class Close_Player_In_Villa : MonoBehaviour
             if (dialogueText != null)
             {
                 if (selectedGameMode == "EASY")
+                {
                     dialogueText.text = npcMessageEasy;
+                    mission = true;
+                }
                 else if (selectedGameMode == "MEDIUM")
+                {
                     dialogueText.text = npcMessageMedium;
+                    mission = true;
+                }
                 else if (selectedGameMode == "HARD")
+                {
                     dialogueText.text = npcMessageHard;
+                    mission = true;
+                }
             }
             else
             {

@@ -49,6 +49,8 @@ public class Close_NPC_Playground : MonoBehaviour
 
     private const string GameModeKey = "GameMode";
 
+    public static bool mission = false;
+
 
     void Start()
     {
@@ -174,11 +176,20 @@ public class Close_NPC_Playground : MonoBehaviour
             if (dialogueText != null)
             {
                 if (selectedGameMode == "EASY")
+                {
                     dialogueText.text = npcMessageEasy;
-                else if(selectedGameMode == "MEDIUM")
+                    mission = true;
+                }
+                else if (selectedGameMode == "MEDIUM")
+                {
                     dialogueText.text = npcMessageMedium;
-                else if(selectedGameMode == "HARD")
+                    mission = true;
+                }
+                else if (selectedGameMode == "HARD")
+                {
                     dialogueText.text = npcMessageHard;
+                    mission = true;
+                }
             }
             else
             {
