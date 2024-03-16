@@ -6,7 +6,9 @@ using TMPro;
 
 public class WomanInsideSchool : MonoBehaviour
 {
-    public string npcMessage = "You have successfully entered the room!";
+    public string npcMessage = "You have successfully entered the room! \n" +
+        "I'm the substitute teacher. The school teacher is missing. \n" +
+        "Continue to the villa for more information!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 

@@ -9,7 +9,7 @@ public class ManInsideSchool : MonoBehaviour
     public string npcMessage = "Welcome to the school!\n" +
         "In order to enter the room please type 'K'.\n" +
         "To find the password please go\n" +
-        "to the cafeteria!";
+        "to the cafeteria' employee!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 

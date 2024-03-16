@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.Localization;
 
 public class Manager : MonoBehaviour
 {
@@ -18,6 +19,10 @@ public class Manager : MonoBehaviour
     public static string selectedGameMode;
     
     private const string GameModeKey = "GameMode";
+
+    public LocalizedString score1LocalizationString;
+
+    public LocalizedString score2LocalizationString;
 
     /*
     public void correctAnswer()
@@ -240,7 +245,14 @@ public class Manager : MonoBehaviour
 
     public void GameOver() 
     {
-        ScoreText.text = "YOUR SCORE IN PARKING'S QUIZ: \n" + Score + " \n Step Away to end the Quiz and continue to level 3 in the main park";
+
+        string localizedScoreText = score1LocalizationString.GetLocalizedString() + " " + Score;
+
+        string localizedContinueText = score2LocalizationString.GetLocalizedString();
+
+        ScoreText.text = localizedScoreText + "\n" + localizedContinueText;
+
+        //ScoreText.text = "YOUR SCORE IN PARKING'S QUIZ: \n" + Score + " \n Step Away to end the Quiz and continue to level 3 in the main park";
         //for Medium Level: ScoreText.text = "YOUR SCORE IN PARKING'S QUIZ: \n" + Score + "/6" + " \n Step Away to end the Quiz and continue to level 3 in the main park";
     }
 

@@ -282,6 +282,14 @@ MonoBehaviour:
     m_Localized: RESUME
     m_Metadata:
       m_Items: []
+  - m_Id: 147117723230208
+    m_Localized: Step Away to end the Quiz and continue to level 3 in the main park
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64285126565888
+    m_Localized: 'YOUR SCORE IN PARKING''S QUIZ:'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

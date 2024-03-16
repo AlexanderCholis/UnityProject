@@ -108,7 +108,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 64285126565888
-    m_Key: ParkingQuizScore
+    m_Key: ParkingQuizScorePart1
     m_Metadata:
       m_Items: []
   - m_Id: 67565659496448
@@ -277,6 +277,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 99196311052288
     m_Key: ResumeKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 147117723230208
+    m_Key: ParkingQuizScorePart2
     m_Metadata:
       m_Items: []
   m_Metadata:
