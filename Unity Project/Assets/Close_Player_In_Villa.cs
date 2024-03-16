@@ -10,13 +10,13 @@ public class Close_Player_In_Villa : MonoBehaviour
 
      public string npcMessageMedium = "Hello there, you have been assigned a very important role.\n" +
         "You are a detective investigating a murder case. Search the house and collect the" +
-        " \n7 objects that incriminate him.The objects are scattered in the different areas" +
-        "of the house.\nHint: We have testimonies that there may be a female captive.\nBe careful and good luck";
+        " \n6 objects that incriminate him.The objects are scattered in the different areas" +
+        "of the house.\nHint: We have testimonies that there may be a female captive.\nBe careful and good luck.";
 
      public string npcMessageHard = "Hello there, you have been assigned a very important role.\n" +
      "You are a detective investigating a murder case. Search the house and collect the" +
-     " \n6 objects that incriminate him.The objects are scattered in the different areas" +
-     "of the house.\nHint: We have testimonies that there may be a female captive.\nBe careful and good luck";
+     " \n8 objects that incriminate him.The objects are scattered in the different areas" +
+     "of the house.\nHint: We have testimonies that there may be a female captive.\nBe careful and good luck.";
 
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
