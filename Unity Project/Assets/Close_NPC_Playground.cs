@@ -6,17 +6,11 @@ using TMPro;
 
 public class Close_NPC_Playground : MonoBehaviour
 {
-    public string npcMessageEasy = "Hello there, you are located in the playground park. Your\n"+
-        "mission is to collect 3 black objects and one traffic sign that are scattered in the\n"+
-        "park in order to continue to your next riddle. Good luck!";
+    public string npcMessageEasy = "Hello there, you are located in the playground park. Your mission is to collect 3 black objects and one traffic sign that are scattered in the park in order to continue to your next riddle. Good luck!";
 
-    public string npcMessageMedium = "Hello there, you are located in the playground park. Your\n" +
-       "mission is to collect 4 black objects that are scattered in the\n" +
-       "park in order to continue to your next riddle. Good luck!";
+    public string npcMessageMedium = "Hello there, you are located in the playground park. Your mission is to collect 4 black objects that are scattered in the park in order to continue to your next riddle. Good luck!";
 
-    public string npcMessageHard = "Hello there, you are located in the playground park. Your\n" +
-        "mission is to collect 5 red objects that are scattered in the\n" +
-        "park in order to continue to your next riddle. Good luck!";
+    public string npcMessageHard = "Hello there, you are located in the playground park. Your mission is to collect 5 red objects that are scattered in the park in order to continue to your next riddle. Good luck!";
 
 
     public Canvas dialogueCanvas; // Link this in the Unity Editor
