@@ -1,0 +1,293 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: english Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: english
+  m_TableCollectionNameGuidString: e7e293edbd316944b870ba9b4e66c5c3
+  m_Entries:
+  - m_Id: 1317642838016
+    m_Key: OptionsKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 21848853192704
+    m_Key: PlayKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22084107509760
+    m_Key: QuitKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22187715207168
+    m_Key: DifficultyKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22347467857920
+    m_Key: EasyKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22402639732736
+    m_Key: MediumKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22416216694784
+    m_Key: HardKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22563294158848
+    m_Key: BackKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22676427120640
+    m_Key: LanguageKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22854118809600
+    m_Key: GreekKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 22925598138368
+    m_Key: EnglishKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 23058142339072
+    m_Key: MenuKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 62340194246656
+    m_Key: ParkingQuizIntro
+    m_Metadata:
+      m_Items: []
+  - m_Id: 63467254063104
+    m_Key: ParkingQuizLevel1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64140989308928
+    m_Key: ParkingQuizLevel2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64152238432256
+    m_Key: ParkingQuizLevel3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64163839877120
+    m_Key: ParkingQuizLevel4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64176418594816
+    m_Key: ParkingQuizLevel5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64188498190336
+    m_Key: ParkingQuizLevel6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64210937716736
+    m_Key: ParkingQuizLevel7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64226490195968
+    m_Key: ParkingQuizLevel8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64246446694400
+    m_Key: ParkingQuizLevel9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64262460547072
+    m_Key: ParkingQuizLevel10
+    m_Metadata:
+      m_Items: []
+  - m_Id: 64285126565888
+    m_Key: ParkingQuizScore
+    m_Metadata:
+      m_Items: []
+  - m_Id: 67565659496448
+    m_Key: IntroStart
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70212974157824
+    m_Key: Level1Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70279600676864
+    m_Key: Level1Button1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70294188466176
+    m_Key: Level1Button2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70302770012160
+    m_Key: Level1Button3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70309900328960
+    m_Key: Level2Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70568462393344
+    m_Key: Level2Button1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70594802622464
+    m_Key: Level2Button2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70608459276288
+    m_Key: Level2Button3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70615467958272
+    m_Key: Level3Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 70864869662720
+    m_Key: Level3Button1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71508686938112
+    m_Key: Level3Button2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 71527682940928
+    m_Key: Level3Button3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72406712590336
+    m_Key: Level4Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72424253169664
+    m_Key: Level4Button1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72432893435904
+    m_Key: Level4Button2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72448756293632
+    m_Key: Level4Button3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72510022492160
+    m_Key: Level5Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72519119937536
+    m_Key: Level5Button1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72528297074688
+    m_Key: Level5Button2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72536375304192
+    m_Key: Level5Button3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72562287714304
+    m_Key: Level6Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72574224703488
+    m_Key: Level6Button1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72582663643136
+    m_Key: Level6Button2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72593493336064
+    m_Key: Level6Button3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72627022602240
+    m_Key: Level7Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72681691160576
+    m_Key: Level7Button1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72719465062400
+    m_Key: Level7Button2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72730210869248
+    m_Key: Level7Button3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72758631473152
+    m_Key: Level8Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72790910836736
+    m_Key: Level8Button1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72826193321984
+    m_Key: Level8Button2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72862373388288
+    m_Key: Level8Button3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72890835935232
+    m_Key: Level9Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72898016583680
+    m_Key: Level9Button1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72906996588544
+    m_Key: Level9Button2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72921731178496
+    m_Key: Level9Button3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72951502348288
+    m_Key: Level10Button
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72980845699072
+    m_Key: Level10Button1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 72988294782976
+    m_Key: Level10Button2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 76792666923008
+    m_Key: Level10Button3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 99196311052288
+    m_Key: ResumeKey
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 3789076873321381912
+  references:
+    version: 2
+    RefIds:
+    - rid: 3789076873321381912
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables,
+        asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1710594973781
