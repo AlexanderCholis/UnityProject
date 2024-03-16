@@ -9,9 +9,11 @@ public class HiddenObjectCheckPlaygroundHard : MonoBehaviour
     public GameObject[] objectsToCheck; // Array of objects to check if they are hidden
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
-    public string messageText = "All objects are hidden playground hard!"; // Message to display
+    public string messageText = "You have successfully found all the hidden objects." +
+        "\nYou can continue to your next mission located in the parking garage."; // Message to display
     public float messageDuration = 4f; // Duration in seconds before hiding the message
 
+    private bool messageShown = false; // Flag to track if the message has been shown
 
     // Variable to store the last clicked button
     public static string selectedGameMode;
@@ -36,7 +38,7 @@ public class HiddenObjectCheckPlaygroundHard : MonoBehaviour
 
     void Update()
     {
-        if (selectedGameMode == "HARD")
+        if (selectedGameMode == "HARD" && !messageShown)
         {
             // Check if all objects are hidden
             bool allHidden = true;
@@ -52,8 +54,9 @@ public class HiddenObjectCheckPlaygroundHard : MonoBehaviour
             // If all objects are hidden, show the message
             if (allHidden && Close_Player_In_Villa.mission == false && Close_NPC_Playground.mission)
             {
+                StartCoroutine(ShowDialogueAfterDelay(2f));
                 //StartCoroutine(ShowDialogueAfterDelay(2f));
-                ShowMessage();
+                //ShowMessage();
             }
         }
     }
@@ -65,13 +68,18 @@ public class HiddenObjectCheckPlaygroundHard : MonoBehaviour
         dialogueText.text = messageText;
         dialogueCanvas.enabled = true;
 
-        yield return new WaitForSeconds(4f); // Wait for 3 seconds
+        // Set the flag to true to indicate that the message has been shown
+        messageShown = true;
 
-        dialogueCanvas.enabled = false; // Hide the dialogue canvas
+        // Wait for messageDuration seconds before hiding the message
+        yield return new WaitForSeconds(messageDuration);
+
+        // Hide the message canvas
+        dialogueCanvas.enabled = false;
     }
 
 
-    void ShowMessage()
+   /* void ShowMessage()
     {
         // Show the message canvas and set the text
         if (dialogueText != null)
@@ -87,7 +95,7 @@ public class HiddenObjectCheckPlaygroundHard : MonoBehaviour
 
         // Start coroutine to hide the message after messageDuration seconds
        // StartCoroutine(HideMessageAfterDelay(messageDuration));
-    }
+    }*/
 
     /*
     IEnumerator HideMessageAfterDelay(float delay)

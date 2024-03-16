@@ -9,9 +9,12 @@ public class HiddenObjectsCheckPlaygroundEasy : MonoBehaviour
     public GameObject[] objectsToCheck; // Array of objects to check if they are hidden
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
-    public string messageText = "All objects are hidden in playground easy!"; // Message to display
+    public string messageText = "You have successfully found all the hidden objects." +
+        "\nYou can continue to your next mission located in the parking garage."; // Message to display
+
     public float messageDuration = 4f; // Duration in seconds before hiding the message
 
+    private bool messageShown = false; // Flag to track if the message has been shown
 
     // Variable to store the last clicked button
     public static string selectedGameMode;
@@ -36,7 +39,7 @@ public class HiddenObjectsCheckPlaygroundEasy : MonoBehaviour
 
     void Update()
     {
-        if (selectedGameMode == "EASY")
+        if (selectedGameMode == "EASY" && !messageShown)
         {
             // Check if all objects are hidden
             bool allHidden = true;
@@ -52,12 +55,30 @@ public class HiddenObjectsCheckPlaygroundEasy : MonoBehaviour
             // If all objects are hidden, show the message
             if (allHidden && Close_Player_In_Villa.mission == false && Close_NPC_Playground.mission)
             {
-                ShowMessage();
+                StartCoroutine(ShowDialogueAfterDelay(2f));
+                //ShowMessage();
             }
         }
     }
 
-    void ShowMessage()
+    IEnumerator ShowDialogueAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        dialogueText.text = messageText;
+        dialogueCanvas.enabled = true;
+
+        // Set the flag to true to indicate that the message has been shown
+        messageShown = true;
+
+        // Wait for messageDuration seconds before hiding the message
+        yield return new WaitForSeconds(messageDuration);
+
+        // Hide the message canvas
+        dialogueCanvas.enabled = false;
+    }
+
+    /*void ShowMessage()
     {
         // Show the message canvas and set the text
         if (dialogueText != null)
@@ -82,6 +103,6 @@ public class HiddenObjectsCheckPlaygroundEasy : MonoBehaviour
 
         // Hide the message canvas
         dialogueCanvas.enabled = false;
-    }
+    }*/
 }
 
