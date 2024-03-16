@@ -7,7 +7,7 @@ using TMPro;
 public class Close_Gun_Villa : MonoBehaviour
 {
     public string npcMessage = "You found the gun, keep going!";
-    public string npcMessage1 = "You found all the hidden objects!";
+   
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 

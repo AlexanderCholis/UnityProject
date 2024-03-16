@@ -52,8 +52,8 @@ public class HiddenObjectCheckPlaygroundHard : MonoBehaviour
             // If all objects are hidden, show the message
             if (allHidden && Close_Player_In_Villa.mission == false && Close_NPC_Playground.mission)
             {
-                StartCoroutine(ShowDialogueAfterDelay(2f));
-                //ShowMessage();
+                //StartCoroutine(ShowDialogueAfterDelay(2f));
+                ShowMessage();
             }
         }
     }
@@ -86,9 +86,10 @@ public class HiddenObjectCheckPlaygroundHard : MonoBehaviour
         dialogueCanvas.enabled = true;
 
         // Start coroutine to hide the message after messageDuration seconds
-        StartCoroutine(HideMessageAfterDelay(messageDuration));
+       // StartCoroutine(HideMessageAfterDelay(messageDuration));
     }
 
+    /*
     IEnumerator HideMessageAfterDelay(float delay)
     {
         // Wait for delay seconds
@@ -96,5 +97,5 @@ public class HiddenObjectCheckPlaygroundHard : MonoBehaviour
 
         // Hide the message canvas
         dialogueCanvas.enabled = false;
-    }
+    }*/
 }

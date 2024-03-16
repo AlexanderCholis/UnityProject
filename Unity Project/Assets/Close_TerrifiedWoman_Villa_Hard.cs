@@ -6,7 +6,8 @@ using TMPro;
 
 public class Close_TerrifiedWoman_Villa_Hard : MonoBehaviour
 {
-    public string npcMessage = "There is somewhere hidden the deadly gun. Hint: Check outisde in the trash bins!";
+    public string npcMessage = "There is somewhere hidden the deadly gun." +
+        " Hint: Ask in the cafeteria for more info!";
 
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
