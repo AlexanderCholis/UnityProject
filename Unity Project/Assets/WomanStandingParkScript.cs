@@ -5,23 +5,52 @@ using UnityEngine;
 public class WomanStandingParkScript : MonoBehaviour
 {
 
-    public QuizManager quizManager; // Reference to the QuizManager script
+    public QuizManager quizManager; 
+    public QuizManager quizManager2;
+    public QuizManager quizManager3;
+
+    public static string selectedGameMode;
+    private const string GameModeKey = "GameMode";
+
+    void Start()
+    {
+        selectedGameMode = PlayerPrefs.GetString(GameModeKey);
+        Debug.Log("GameMode:" + selectedGameMode);
+    }
 
     private void OnTriggerEnter(Collider other)
+
     {
-        if (other.CompareTag("Player"))
+        if (selectedGameMode == "EASY" && other.CompareTag("Player"))
         {
-            // Assuming the quizManager has a method to start the quiz
-            quizManager.StartQuiz();
+                quizManager.StartQuiz();
         }
+        else if (selectedGameMode == "MEDIUM" && other.CompareTag("Player"))
+            {
+                quizManager2.StartQuiz();
+            }
+        else if (selectedGameMode == "HARD" && other.CompareTag("Player"))
+        {
+            quizManager2.StartQuiz();
+        }
+
     }
+
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+
+        if (selectedGameMode == "EASY" && other.CompareTag("Player"))
         {
             quizManager.EndQuiz();
         }
+        else if (selectedGameMode == "MEDIUM" && other.CompareTag("Player"))
+        {
+            quizManager2.EndQuiz();
+        }
+        else if (selectedGameMode == "HARD" && other.CompareTag("Player"))
+        {
+            quizManager3.EndQuiz();
+        }
     }
-
 }
