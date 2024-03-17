@@ -16,6 +16,9 @@ public class MainMenu : MonoBehaviour
     public static string selectedGameMode;
 
 
+    public GameObject mainmenu;
+    public GameObject helpmenu;
+
 
     public void PlayGame()
     {
@@ -64,6 +67,13 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.Save();
 
         SceneManager.LoadScene(2);
+    }
+
+    public void HelpBtn()
+    {
+       mainmenu.SetActive(false); // Hide the object to hide
+       helpmenu.SetActive(true); // Show the object to show
+
     }
 
     void Awake()
