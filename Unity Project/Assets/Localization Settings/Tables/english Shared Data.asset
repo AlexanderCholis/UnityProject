@@ -283,6 +283,22 @@ MonoBehaviour:
     m_Key: ParkingQuizScorePart2
     m_Metadata:
       m_Items: []
+  - m_Id: 390714770989056
+    m_Key: ManSchoolMediumMessage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 391740366397440
+    m_Key: ManSchoolHardMessage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 400418314264576
+    m_Key: WomanSchoolMessage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 400499553738752
+    m_Key: StudentSchoolMessage
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

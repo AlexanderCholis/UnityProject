@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
 
 public class StudentInsideSchool : MonoBehaviour
 {
+    public LocalizedString StudentSchoolMessage;
+
+    /*
     public string npcMessage = "You have successfully entered the room! \n" +
        "The school teacher is missing. \n" +
        "Continue to the villa for more information!";
+    */
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 
@@ -33,7 +38,8 @@ public class StudentInsideSchool : MonoBehaviour
         {
             if (dialogueText != null)
             {
-                dialogueText.text = npcMessage;
+                string localizedMessage = StudentSchoolMessage.GetLocalizedString();
+                dialogueText.text = localizedMessage;
             }
             else
             {

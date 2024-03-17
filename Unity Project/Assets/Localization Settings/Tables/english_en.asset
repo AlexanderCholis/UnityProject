@@ -290,6 +290,48 @@ MonoBehaviour:
     m_Localized: 'YOUR SCORE IN PARKING''S QUIZ:'
     m_Metadata:
       m_Items: []
+  - m_Id: 390714770989056
+    m_Localized: 'Welcome to the school!
+
+      In order to enter the room please
+      type ''K''.
+
+      To find the password please go
+
+      to the cafeteria''
+      employee!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 391740366397440
+    m_Localized: 'Welcome to the school!
+
+      In order to enter the room please
+      type ''K''.
+
+      To find the password please navigate
+
+      inside the school!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 400499553738752
+    m_Localized: 'You have successfully entered the room!
+
+      The school teacher
+      is missing.
+
+      Continue to the villa for more information!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 400418314264576
+    m_Localized: 'You have successfully entered the room!
+
+      I''m the substitute
+      teacher. The school teacher is missing.
+
+      Continue to the villa for more
+      information!'
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

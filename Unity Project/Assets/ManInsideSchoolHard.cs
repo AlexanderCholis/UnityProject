@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
 
 public class ManInsideSchoolHard : MonoBehaviour
 {
+    public LocalizedString ManSchoolHardMessage;
+    /*
     public string npcMessage = "Welcome to the school!\n" +
             "In order to enter the room please type 'K'.\n" +
             "To find the password please navigate\n" +
             "inside the school!";
+    */
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 
@@ -34,7 +38,8 @@ public class ManInsideSchoolHard : MonoBehaviour
         {
             if (dialogueText != null)
             {
-                dialogueText.text = npcMessage;
+                string localizedMessage = ManSchoolHardMessage.GetLocalizedString();
+                dialogueText.text = localizedMessage;
             }
             else
             {

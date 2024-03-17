@@ -91,20 +91,23 @@ public class OpenSchoolDoor : MonoBehaviour
             npcStudent.SetActive(true);
         }
         */
-        if (isAtDoor && npcRemyHard.activeSelf) // Check if the player is at the door and npcRemyHard is active
+        if (selectedGameMode == "HARD")
         {
-            RotateDoors();
-            npcRemyHard.SetActive(true);
-            npcRemyMedium.SetActive(false);
-            npcTeacher.SetActive(false);
-            npcStudent.SetActive(true);
-        }
-        else
-        {
-            npcRemyHard.SetActive(true);
-            npcRemyMedium.SetActive(false);
-            npcTeacher.SetActive(false);
-            npcStudent.SetActive(true);
+            if (isAtDoor && npcRemyHard.activeSelf) // Check if the player is at the door and npcRemyHard is active
+            {
+                RotateDoors();
+                npcRemyHard.SetActive(true);
+                npcRemyMedium.SetActive(false);
+                npcTeacher.SetActive(false);
+                npcStudent.SetActive(true);
+            }
+            else
+            {
+                npcRemyHard.SetActive(true);
+                npcRemyMedium.SetActive(false);
+                npcTeacher.SetActive(false);
+                npcStudent.SetActive(true);
+            }
         }
 }
 

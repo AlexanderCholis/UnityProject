@@ -3,15 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
+
+
 
 public class ManInsideSchool : MonoBehaviour
 {
+    public LocalizedString ManSchoolMediumMessage;
+    /*
     public string npcMessage = "Welcome to the school!\n" +
         "In order to enter the room please type 'K'.\n" +
         "To find the password please go\n" +
         "to the cafeteria' employee!";
+    */
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
+
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +41,8 @@ public class ManInsideSchool : MonoBehaviour
         {
             if (dialogueText != null)
             {
-                dialogueText.text = npcMessage;
+                string localizedMessage = ManSchoolMediumMessage.GetLocalizedString();
+                dialogueText.text = localizedMessage;
             }
             else
             {
