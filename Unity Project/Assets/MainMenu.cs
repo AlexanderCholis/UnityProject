@@ -18,6 +18,8 @@ public class MainMenu : MonoBehaviour
 
     public GameObject mainmenu;
     public GameObject helpmenu;
+    public GameObject controlsmenu;
+    public GameObject playerpurpose;
 
 
     public void PlayGame()
@@ -74,6 +76,19 @@ public class MainMenu : MonoBehaviour
        mainmenu.SetActive(false); // Hide the object to hide
        helpmenu.SetActive(true); // Show the object to show
 
+    }
+
+    public void GameControl()
+    {
+        helpmenu.SetActive(false); // Hide the object to hide
+        controlsmenu.SetActive(true); // Show the object to show
+
+    }
+
+    public void PlayerPurpose()
+    {
+        helpmenu.SetActive(false); // hide the object to hide
+        playerpurpose.SetActive(true);
     }
 
     void Awake()
