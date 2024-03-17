@@ -14,16 +14,24 @@ public class Close_NPC_Playground_Medium : MonoBehaviour
     private TextMeshProUGUI dialogueText;
 
     // hide the easy mode objects
-    public GameObject BlackWheel;
     public GameObject BlackCar;
+    public GameObject BlackWheel;
     public GameObject BlackHammer;
-    public GameObject ParkingSign;
+    public GameObject ParkGarageSign;
+  
+
+    // hide the hard mode objects
+    public GameObject RedCar;
+    public GameObject RedRock;
+    public GameObject RedCupcake;
+    public GameObject RedWineGlass;
+    public GameObject RedFlower;
 
     void Start()
     {
         // Assuming the Text component is a child of the Canvas
         //dialogueText = dialogueCanvas.GetComponentInChildren<Text>();
-        dialogueText = dialogueCanvas.transform.Find("Text1").GetComponent<TextMeshProUGUI>();
+        dialogueText = dialogueCanvas.transform.Find("Text").GetComponent<TextMeshProUGUI>();
 
         if (dialogueText == null)
         {
@@ -34,12 +42,20 @@ public class Close_NPC_Playground_Medium : MonoBehaviour
             dialogueCanvas.enabled = false;
         }
 
-        if (BlackWheel != null && BlackCar != null && BlackHammer != null && ParkingSign != null)
+        if (BlackCar != null && BlackWheel != null && BlackHammer != null && ParkGarageSign != null &&
+            RedCar != null && RedRock != null && RedCupcake != null && RedWineGlass != null && RedFlower != null)
         {
-            BlackWheel.SetActive(false);
             BlackCar.SetActive(false);
+            BlackWheel.SetActive(false);
             BlackHammer.SetActive(false);
-            ParkingSign.SetActive(false);
+            ParkGarageSign.SetActive(false);
+
+            RedCar.SetActive(false);
+            RedRock.SetActive(false);
+            RedCupcake.SetActive(false);
+            RedWineGlass.SetActive(false);
+            RedFlower.SetActive(false);
+
         }
         else
         {
