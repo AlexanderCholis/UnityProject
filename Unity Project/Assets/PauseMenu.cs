@@ -12,15 +12,29 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject imagePanel; // Reference to the GameObject containing the Image component
 
-    public Sprite easyImage;
-    public Sprite mediumImage;
-    public Sprite hardImage;
+   
+    
+    public Sprite townmapEasy;
+    public Sprite townmapMedium;
+    public Sprite townmapHard;
+
+    // Dictionary to store the mapping between image names and sprites
+   // public Dictionary<string, Sprite> imageDictionary = new Dictionary<string, Sprite>();
 
 
     // Variable to store the last clicked button
     public static string selectedGameMode;
 
     private const string GameModeKey = "GameMode";
+
+    /*void Start()
+    {
+   
+    // Populate the image dictionary with the sprites you want to use
+    imageDictionary.Add("EASY", townmapEasy);
+        imageDictionary.Add("MEDIUM", townmapMedium);
+        imageDictionary.Add("HARD", townmapHard);
+    }*/
 
     // Update is called once per frame
     void Update()
@@ -113,13 +127,13 @@ public class PauseMenu : MonoBehaviour
             switch (selectedGameMode)
             {
                 case "EASY":
-                    imageComponent.sprite = easyImage;
+                    imageComponent.sprite = townmapEasy;
                     break;
                 case "MEDIUM":
-                    imageComponent.sprite = mediumImage;
+                    imageComponent.sprite = townmapMedium;
                     break;
                 case "HARD":
-                    imageComponent.sprite = hardImage;
+                    imageComponent.sprite = townmapHard;
                     break;
                 default:
                     Debug.LogError("Invalid game mode: " + selectedGameMode);
@@ -131,6 +145,7 @@ public class PauseMenu : MonoBehaviour
         {
             Debug.LogError("Image component not found within children of imagePanel.");
         }
+
     }
 
     public void Back()
