@@ -80,8 +80,8 @@ public class Close_Wheel_Playground : MonoBehaviour
         }
     }
 
-    // Check the score and display a message when it reaches 3
-    void Update()
+    // Check the score and display a message when it reaches 4
+   /* void Update()
     {
         if (scoreText != null)
         {
@@ -118,8 +118,8 @@ public class Close_Wheel_Playground : MonoBehaviour
             "\n located in the parking garage!";
         dialogueCanvas.enabled = true;
 
-        yield return new WaitForSeconds(3f); // Wait for 3 seconds
+        yield return new WaitForSeconds(4f); // Wait for 3 seconds
 
         dialogueCanvas.enabled = false; // Hide the dialogue canvas
-    }
+    }*/
 }

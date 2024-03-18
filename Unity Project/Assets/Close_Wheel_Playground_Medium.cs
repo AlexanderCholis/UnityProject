@@ -12,6 +12,10 @@ public class Close_Wheel_Playground_Medium : MonoBehaviour
 
     public GameObject BlackWheel;
 
+    public TextMeshProUGUI scoreText;
+    private string[] parts; // Define the parts array here
+    string numberPart;
+
     void Start()
     {
         // Assuming the Text component is a child of the Canvas
@@ -75,4 +79,47 @@ public class Close_Wheel_Playground_Medium : MonoBehaviour
             Debug.LogError("Error on trigger exit");
         }
     }
+
+    // Check the score and display a message when it reaches 4
+    /*void Update()
+    {
+        if (scoreText != null)
+        {
+            // Split the score text and store the parts in the array
+            parts = scoreText.text.Split(' ');
+
+            if (parts.Length > 0)
+            {
+                numberPart = parts[0]; // Get the first part
+                //print("Score Number: " + numberPart);
+            }
+            else
+            {
+                Debug.LogError("Invalid points string format!");
+            }
+        }
+        else
+        {
+            Debug.LogError("Score text is not assigned!");
+        }
+
+        if (numberPart == "4")
+        {
+            StartCoroutine(ShowDialogueAfterDelay(2f));
+        }
+    }
+
+
+    IEnumerator ShowDialogueAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+
+        dialogueText.text = "Congratulations! You can now continue to your next mission" +
+            "\n located in the parking garage!";
+        dialogueCanvas.enabled = true;
+
+        yield return new WaitForSeconds(4f); // Wait for 3 seconds
+
+        dialogueCanvas.enabled = false; // Hide the dialogue canvas
+    }*/
 }
