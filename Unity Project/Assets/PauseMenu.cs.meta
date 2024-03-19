@@ -7,7 +7,7 @@ MonoImporter:
   - pauseMenuUI: {instanceID: 0}
   - canvas: {instanceID: 0}
   - imagePanel: {instanceID: 0}
-  - townmapEasy: {instanceID: 0}
+  - townmapEasy: {fileID: 21300000, guid: d178a36913734de4a93c7a0873925496, type: 3}
   - townmapMedium: {fileID: 21300000, guid: ee37953b003d4fc4ea4c7df4fe340a43, type: 3}
   - townmapHard: {fileID: 21300000, guid: ee37953b003d4fc4ea4c7df4fe340a43, type: 3}
   executionOrder: 0

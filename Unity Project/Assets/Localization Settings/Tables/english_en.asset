@@ -332,6 +332,52 @@ MonoBehaviour:
       information!'
     m_Metadata:
       m_Items: []
+  - m_Id: 844169155321856
+    m_Localized: HELP
+    m_Metadata:
+      m_Items: []
+  - m_Id: 847603405299712
+    m_Localized: PLAYER'S PURPOSE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 851118466932736
+    m_Localized: GAME CONTROLS
+    m_Metadata:
+      m_Items: []
+  - m_Id: 861186633637888
+    m_Localized: Showing pause menu and starting quizzes
+    m_Metadata:
+      m_Items: []
+  - m_Id: 861459829628928
+    m_Localized: Player goes up, left, down, right
+    m_Metadata:
+      m_Items: []
+  - m_Id: 861615576719360
+    m_Localized: 'Player jumps
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 861694228307968
+    m_Localized: 'Player goes up, left, down, right
+
+'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 861731058491392
+    m_Localized: Moves player's camera
+    m_Metadata:
+      m_Items: []
+  - m_Id: 873030639296512
+    m_Localized: Your goal is to explore the city, solving puzzles, quizzes and collecting
+      items to achieve the best possible score. In each difficulty level (easy, medium,
+      hard), your mission is different.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 875973019049984
+    m_Localized: CITY MAP
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

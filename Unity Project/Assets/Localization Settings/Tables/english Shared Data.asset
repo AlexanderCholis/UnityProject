@@ -299,6 +299,46 @@ MonoBehaviour:
     m_Key: StudentSchoolMessage
     m_Metadata:
       m_Items: []
+  - m_Id: 844169155321856
+    m_Key: HelpKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 847603405299712
+    m_Key: PlayerPurposeKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 851118466932736
+    m_Key: GameControlsKey
+    m_Metadata:
+      m_Items: []
+  - m_Id: 861186633637888
+    m_Key: ESCtext
+    m_Metadata:
+      m_Items: []
+  - m_Id: 861459829628928
+    m_Key: WASDtext
+    m_Metadata:
+      m_Items: []
+  - m_Id: 861615576719360
+    m_Key: SPACEtext
+    m_Metadata:
+      m_Items: []
+  - m_Id: 861694228307968
+    m_Key: ARROWtext
+    m_Metadata:
+      m_Items: []
+  - m_Id: 861731058491392
+    m_Key: CURSORtext
+    m_Metadata:
+      m_Items: []
+  - m_Id: 873030639296512
+    m_Key: PLAYERPURPOSEtext
+    m_Metadata:
+      m_Items: []
+  - m_Id: 875973019049984
+    m_Key: CItyMapKey
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
