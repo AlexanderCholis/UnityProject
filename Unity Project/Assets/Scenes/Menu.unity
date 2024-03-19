@@ -873,6 +873,18 @@ MonoBehaviour:
   references:
     version: 2
     RefIds: []
+--- !u!1 &650663686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3214657447065533775, guid: c9a66f5ebe8b58347a9afa975ea0d9cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 823269908}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &650663687 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3565275926011397389, guid: c9a66f5ebe8b58347a9afa975ea0d9cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 823269908}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &823269908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -881,6 +893,31 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 92746274933746743, guid: c9a66f5ebe8b58347a9afa975ea0d9cf,
+        type: 3}
+      propertyPath: helpmenu
+      value: 
+      objectReference: {fileID: 336445953}
+    - target: {fileID: 92746274933746743, guid: c9a66f5ebe8b58347a9afa975ea0d9cf,
+        type: 3}
+      propertyPath: mainmenu
+      value: 
+      objectReference: {fileID: 336445956}
+    - target: {fileID: 92746274933746743, guid: c9a66f5ebe8b58347a9afa975ea0d9cf,
+        type: 3}
+      propertyPath: optionsmenu
+      value: 
+      objectReference: {fileID: 336445957}
+    - target: {fileID: 92746274933746743, guid: c9a66f5ebe8b58347a9afa975ea0d9cf,
+        type: 3}
+      propertyPath: controlsmenu
+      value: 
+      objectReference: {fileID: 650663687}
+    - target: {fileID: 92746274933746743, guid: c9a66f5ebe8b58347a9afa975ea0d9cf,
+        type: 3}
+      propertyPath: playerpurpose
+      value: 
+      objectReference: {fileID: 650663686}
     - target: {fileID: 204937543006825080, guid: c9a66f5ebe8b58347a9afa975ea0d9cf,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -1735,6 +1772,31 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -3
       objectReference: {fileID: 0}
+    - target: {fileID: 3978339605614377127, guid: c9a66f5ebe8b58347a9afa975ea0d9cf,
+        type: 3}
+      propertyPath: helpmenu
+      value: 
+      objectReference: {fileID: 336445953}
+    - target: {fileID: 3978339605614377127, guid: c9a66f5ebe8b58347a9afa975ea0d9cf,
+        type: 3}
+      propertyPath: mainmenu
+      value: 
+      objectReference: {fileID: 336445956}
+    - target: {fileID: 3978339605614377127, guid: c9a66f5ebe8b58347a9afa975ea0d9cf,
+        type: 3}
+      propertyPath: optionsmenu
+      value: 
+      objectReference: {fileID: 336445957}
+    - target: {fileID: 3978339605614377127, guid: c9a66f5ebe8b58347a9afa975ea0d9cf,
+        type: 3}
+      propertyPath: controlsmenu
+      value: 
+      objectReference: {fileID: 650663687}
+    - target: {fileID: 3978339605614377127, guid: c9a66f5ebe8b58347a9afa975ea0d9cf,
+        type: 3}
+      propertyPath: playerpurpose
+      value: 
+      objectReference: {fileID: 650663686}
     - target: {fileID: 4047347025084703540, guid: c9a66f5ebe8b58347a9afa975ea0d9cf,
         type: 3}
       propertyPath: m_fontSize
