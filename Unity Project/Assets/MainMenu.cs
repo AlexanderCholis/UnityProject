@@ -17,6 +17,7 @@ public class MainMenu : MonoBehaviour
 
 
     public GameObject mainmenu;
+    public GameObject optionsmenu;
     public GameObject helpmenu;
     public GameObject controlsmenu;
     public GameObject playerpurpose;
@@ -78,6 +79,11 @@ public class MainMenu : MonoBehaviour
 
     }
 
+    public void OptionsBtn()
+    {
+        mainmenu.SetActive(false); // Hide the object to hide
+        optionsmenu.SetActive(true); // Show the object to show
+    }
     public void GameControl()
     {
         helpmenu.SetActive(false); // Hide the object to hide
