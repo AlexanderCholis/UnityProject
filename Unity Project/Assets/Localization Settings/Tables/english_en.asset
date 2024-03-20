@@ -406,10 +406,10 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1201773430218752
     m_Localized: "Hello there, you have been assigned a very important role. You
-      are a detective investigating a murder case. Search the house and collect the
-      8 objects that incriminate him.The objects are scattered in the different areas
-      of the house. Hint: We have testimonies that there may be a female captive.
-      Be careful and good luck.\n   "
+      are a detective investigating a murder case. Search and collect the 8 objects
+      that incriminate him. The 6 objects are scattered in the different areas of
+      the house. The rest 2 objects are in the residence. Hint: We have testimonies
+      that there may be a female captive. Be careful and good luck.\n   "
     m_Metadata:
       m_Items: []
   - m_Id: 1203603837067264
