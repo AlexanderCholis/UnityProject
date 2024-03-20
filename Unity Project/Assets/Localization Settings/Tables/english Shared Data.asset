@@ -339,6 +339,10 @@ MonoBehaviour:
     m_Key: CItyMapKey
     m_Metadata:
       m_Items: []
+  - m_Id: 1548752634650624
+    m_Key: ManResidenceMessage
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

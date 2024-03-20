@@ -378,6 +378,11 @@ MonoBehaviour:
     m_Localized: CITY MAP
     m_Metadata:
       m_Items: []
+  - m_Id: 1548752634650624
+    m_Localized: Inside the Residence you will find the last two objects that incriminate
+      the murderer.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
