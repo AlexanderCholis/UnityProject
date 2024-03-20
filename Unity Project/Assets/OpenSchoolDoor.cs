@@ -8,6 +8,8 @@ public class OpenSchoolDoor : MonoBehaviour
     private Animator anim;
     private bool isAtDoor = false;
 
+    private bool doorOpened = false;
+
     [SerializeField] private TextMeshProUGUI CodeText;
     string codeTextValue = "";
     private string safeCode;
@@ -19,6 +21,8 @@ public class OpenSchoolDoor : MonoBehaviour
     public GameObject npcRemyHard; // Reference to the NPC GameObject
     public GameObject npcTeacher;
     public GameObject npcStudent;
+
+    public int Score;
 
     //Variable to store the last clicked button
     public static string selectedGameMode;
@@ -54,6 +58,7 @@ public class OpenSchoolDoor : MonoBehaviour
         {
             anim.SetTrigger("OpenDoor");
             CodePanel.SetActive(false);
+            doorOpened = true;
         }
 
         if(codeTextValue.Length >= 4)
@@ -116,6 +121,12 @@ public class OpenSchoolDoor : MonoBehaviour
         if (other.tag == "Player")
         {
             isAtDoor = true;
+        }
+        if (other.tag == "Player" && !doorOpened) // Check if the door is not already opened
+        {
+            isAtDoor = true;
+            Score = 1; // Increment the score when the player enters inside and the door is not already opened
+            ScoreManager.instance.AddPointEasyMode();
         }
     }
 
