@@ -20,6 +20,9 @@ public class Manager : MonoBehaviour
         {
             Levels[currentLevel].SetActive(false);
             Score++;
+
+            ScoreManager.instance.AddPointEasyMode();
+
             currentLevel++;
             Levels[currentLevel].SetActive(true);
         }
