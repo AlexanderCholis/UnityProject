@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
 
 public class Close_Knife_Villa_Hard : MonoBehaviour
 {
-    public string npcMessage = "You found the rusty knife, keep going!";
+    public LocalizedString KnifeHard;
+    //public string npcMessage = "You found the rusty knife, keep going!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 
@@ -49,7 +51,9 @@ public class Close_Knife_Villa_Hard : MonoBehaviour
         {
             if (dialogueText != null)
             {
-                dialogueText.text = npcMessage;
+                //dialogueText.text = npcMessage;
+                string localizedMessage = KnifeHard.GetLocalizedString();
+                dialogueText.text = localizedMessage;
                 ScoreManager.instance.AddPointEasyMode();
 
                 knifeflag = true;

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
 
 public class Close_GunCase_Villa_Medium : MonoBehaviour
 {
-    public string npcMessage = "You found the gun case, keep going!";
+    public LocalizedString GunCaseMedium;
+    //public string npcMessage = "You found the gun case, keep going!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 
@@ -50,7 +52,11 @@ public class Close_GunCase_Villa_Medium : MonoBehaviour
         {
             if (dialogueText != null)
             {
-                dialogueText.text = npcMessage;
+                //dialogueText.text = npcMessage;
+
+                string localizedMessage = GunCaseMedium.GetLocalizedString();
+                dialogueText.text = localizedMessage;
+
                 ScoreManager.instance.AddPointEasyMode();
 
                 //guncaseflag = true;

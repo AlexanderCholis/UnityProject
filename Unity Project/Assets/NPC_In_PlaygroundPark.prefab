@@ -399,27 +399,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8918a6d44d5f92c4bad5b6e443faecf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcMessageEasy: 'Hello there, you are located in the playground park. Your
-
-    mission
-    is to collect 3 black objects and one traffic sign that are scattered in the
-
-    park
-    in order to continue to your next riddle. Good luck!'
-  npcMessageMedium: 'Hello there, you are located in the playground park. Your
-
-    mission
-    is to collect 4 black objects that are scattered in the
-
-    park in order to
-    continue to your next riddle. Good luck!'
-  npcMessageHard: 'Hello there, you are located in the playground park. Your
-
-    mission
-    is to collect 5 red objects that are scattered in the
-
-    park in order to continue
-    to your next riddle. Good luck!'
+  PlayerPlaygroundEasyMessage:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  PlayerPlaygroundMediumMessage:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  PlayerPlaygroundHardMessage:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   dialogueCanvas: {fileID: 4842968026515891851}
   dialogueText: {fileID: 8927572592098986384}
   BlackCar: {fileID: 0}
@@ -435,6 +441,9 @@ MonoBehaviour:
   RedWineGlass: {fileID: 0}
   RedCupcake: {fileID: 0}
   RedFlower: {fileID: 0}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &129598911775222632
 PrefabInstance:
   m_ObjectHideFlags: 0

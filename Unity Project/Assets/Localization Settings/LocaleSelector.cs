@@ -7,8 +7,11 @@ public class LocaleSelector : MonoBehaviour
 {
     private void Start()
     {
-        int ID = PlayerPrefs.GetInt("LocaleKey", 0);
-        ChangeLocale(ID);
+        if (PlayerPrefs.HasKey("LocaleKey"))
+        {
+            int ID = PlayerPrefs.GetInt("LocaleKey", 0);
+            ChangeLocale(ID);
+        }
     }
 
     private bool active = false;
@@ -27,5 +30,9 @@ public class LocaleSelector : MonoBehaviour
         yield return LocalizationSettings.InitializationOperation;
         LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[_localeID];
         active = false;
+
+        // Save the selected locale ID
+        PlayerPrefs.SetInt("LocaleKey", _localeID);
+        PlayerPrefs.Save(); // Make sure to save PlayerPrefs changes
     }
 }

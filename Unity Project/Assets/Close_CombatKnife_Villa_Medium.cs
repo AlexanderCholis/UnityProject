@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
 
 public class Close_CombatKnife_Villa_Medium : MonoBehaviour
 {
-    public string npcMessage = "You found the combat knife, keep going!";
+    public LocalizedString CombatKnifeMedium;
+    //public string npcMessage = "You found the combat knife, keep going!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 
@@ -50,7 +52,9 @@ public class Close_CombatKnife_Villa_Medium : MonoBehaviour
         {
             if (dialogueText != null)
             {
-                dialogueText.text = npcMessage;
+                //dialogueText.text = npcMessage;
+                string localizedMessage = CombatKnifeMedium.GetLocalizedString();
+                dialogueText.text = localizedMessage;
                 ScoreManager.instance.AddPointEasyMode();
 
                 //combatknifeflag = true;

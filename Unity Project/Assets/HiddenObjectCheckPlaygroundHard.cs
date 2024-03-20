@@ -3,14 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
 
 public class HiddenObjectCheckPlaygroundHard : MonoBehaviour
 {
     public GameObject[] objectsToCheck; // Array of objects to check if they are hidden
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
-    public string messageText = "You have successfully found all the hidden objects." +
+
+    /*public string messageText = "You have successfully found all the hidden objects." +
         "\nYou can continue to your next mission located in the parking garage."; // Message to display
+   */
+
+    public LocalizedString AllPHard;
+
     public float messageDuration = 4f; // Duration in seconds before hiding the message
 
     private bool messageShown = false; // Flag to track if the message has been shown
@@ -65,7 +71,11 @@ public class HiddenObjectCheckPlaygroundHard : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        dialogueText.text = messageText;
+        //dialogueText.text = messageText;
+
+        string localizedMessage = AllPHard.GetLocalizedString();
+        dialogueText.text = localizedMessage;
+
         dialogueCanvas.enabled = true;
 
         // Set the flag to true to indicate that the message has been shown
