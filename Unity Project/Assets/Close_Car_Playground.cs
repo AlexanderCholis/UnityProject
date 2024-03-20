@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public string npcMessage = "You found the car, keep going!";
+    public LocalizedString CloseBlackCarPlaygroundEasy;
+
+    //public string npcMessage = "You found the car, keep going!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 
@@ -58,7 +61,10 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (dialogueText != null)
             {
-                dialogueText.text = npcMessage;
+                //dialogueText.text = npcMessage;
+                string localizedMessage =CloseBlackCarPlaygroundEasy.GetLocalizedString();
+                dialogueText.text = localizedMessage;
+
                 ScoreManager.instance.AddPointEasyMode();
                 StartCoroutine(HideObjectDelayed(3f)); // Delay for 3 seconds
             }

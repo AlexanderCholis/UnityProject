@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
 
 public class Close_Axe_Villa_Hard : MonoBehaviour
 {
-
-    public string npcMessage = "You found the axe, keep going!";
+    public LocalizedString AxeHard;
+    //public string npcMessage = "You found the axe, keep going!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 
@@ -50,7 +51,10 @@ public class Close_Axe_Villa_Hard : MonoBehaviour
         {
             if (dialogueText != null)
             {
-                dialogueText.text = npcMessage;
+                //dialogueText.text = npcMessage;
+                string localizedMessage = AxeHard.GetLocalizedString();
+                dialogueText.text = localizedMessage;
+
                 ScoreManager.instance.AddPointEasyMode();
 
                 axeflag = true;

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
 
 public class Close_Pistol_Villa_Hard : MonoBehaviour
 {
-    public string npcMessage = "You found the pistol, keep going!";
+    public LocalizedString PistolHard;
+    //public string npcMessage = "You found the pistol, keep going!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 
@@ -49,7 +51,10 @@ public class Close_Pistol_Villa_Hard : MonoBehaviour
         {
             if (dialogueText != null)
             {
-                dialogueText.text = npcMessage;
+                //dialogueText.text = npcMessage;
+                string localizedMessage = PistolHard.GetLocalizedString();
+                dialogueText.text = localizedMessage;
+
                 ScoreManager.instance.AddPointEasyMode();
 
                 pistolflag = true;

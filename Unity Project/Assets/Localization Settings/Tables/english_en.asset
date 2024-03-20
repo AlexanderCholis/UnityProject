@@ -378,6 +378,152 @@ MonoBehaviour:
     m_Localized: CITY MAP
     m_Metadata:
       m_Items: []
+  - m_Id: 1195440341557248
+    m_Localized: "Hello there, you are located in the playground park. Your mission
+      is to collect 3 black objects and one traffic sign that are scattered in the
+      park in order to continue to your next riddle. Good luck!\n\r\n   "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1198126931681280
+    m_Localized: "Hello there, you are located in the playground park. Your mission
+      is to collect 4 black objects that are scattered in the park in order to continue
+      to your next riddle. Good luck!\n\r\n    "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1198658199003136
+    m_Localized: "Hello there, you are located in the playground park. Your mission
+      is to collect 5 red objects that are scattered in the park in order to continue
+      to your next riddle. Good luck!\n   "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1201733399781376
+    m_Localized: 'Hello there, you have been assigned a very important role. You
+      are a detective investigating a murder case. Search the house and collect the
+      6 objects that incriminate him.The objects are scattered in the different areas
+      of the house.Hint: We have testimonies that there may be a female captive.Be
+      careful and good luck.'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1201773430218752
+    m_Localized: "Hello there, you have been assigned a very important role. You
+      are a detective investigating a murder case. Search the house and collect the
+      8 objects that incriminate him.The objects are scattered in the different areas
+      of the house. Hint: We have testimonies that there may be a female captive.
+      Be careful and good luck.\n   "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1203603837067264
+    m_Localized: You found the car, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1203861891620864
+    m_Localized: You found the wheel, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1204096638427136
+    m_Localized: You found the hammer, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1204268827189248
+    m_Localized: You found the parking sign, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1204436628709376
+    m_Localized: You found the pillow, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1204636797673472
+    m_Localized: You found the donut, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1204810815152128
+    m_Localized: You found the rock, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1205012645060608
+    m_Localized: You found the cupcake, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1205143566065664
+    m_Localized: You found the glass of wine, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1205299397042176
+    m_Localized: You found the flower, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1205446851993600
+    m_Localized: You found the gun, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1205746631483392
+    m_Localized: You found the rusty knife, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1205919877210112
+    m_Localized: You found the gun case, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1206067491545088
+    m_Localized: You found the sniper, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1206983221354496
+    m_Localized: You found the sight, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1207805275578368
+    m_Localized: You found the combat knife, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1207811835469824
+    m_Localized: HELPPPP ME PLEASEE!!!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1207815736172544
+    m_Localized: You found the axe, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1207819435548672
+    m_Localized: You found the bullets, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1207822329618432
+    m_Localized: You found the pistol, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1207824762314752
+    m_Localized: You found the shotgun, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1207827685744640
+    m_Localized: 'There is somewhere hidden the deadly gun. Hint: Ask the man outside
+      the cafeteria for more info!'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1207829761925120
+    m_Localized: You found the deadly knife, keep going!
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1208213817565184
+    m_Localized: You have successfully found all the evidence that incriminates him.
+      You can continue to your next mission..
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1208216447393792
+    m_Localized: You have successfully found all the evidence that incriminates him.
+      You can continue to your next mission..
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1207037432733696
+    m_Localized: You have successfully found all the hidden objects. You can continue
+      to your next mission located in the parking garage.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1478136385019904
+    m_Localized: "HINT: You should better look in the bedrooms!\n    "
+    m_Metadata:
+      m_Items: []
   - m_Id: 1548752634650624
     m_Localized: Inside the Residence you will find the last two objects that incriminate
       the murderer.

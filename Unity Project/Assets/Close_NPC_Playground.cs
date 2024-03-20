@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
 
 public class Close_NPC_Playground : MonoBehaviour
 {
-    public string npcMessageEasy = "Hello there, you are located in the playground park. Your mission is to collect 3 black objects and one traffic sign that are scattered in the park in order to continue to your next riddle. Good luck!";
+    public LocalizedString PlayerPlaygroundEasyMessage;
+    public LocalizedString PlayerPlaygroundMediumMessage;
+    public LocalizedString PlayerPlaygroundHardMessage;
+
+    /*public string npcMessageEasy = "Hello there, you are located in the playground park. Your mission is to collect 3 black objects and one traffic sign that are scattered in the park in order to continue to your next riddle. Good luck!";
 
     public string npcMessageMedium = "Hello there, you are located in the playground park. Your mission is to collect 4 black objects that are scattered in the park in order to continue to your next riddle. Good luck!";
 
     public string npcMessageHard = "Hello there, you are located in the playground park. Your mission is to collect 5 red objects that are scattered in the park in order to continue to your next riddle. Good luck!";
-
+    */
 
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     public TextMeshProUGUI dialogueText;
@@ -171,18 +176,31 @@ public class Close_NPC_Playground : MonoBehaviour
             {
                 if (selectedGameMode == "EASY")
                 {
-                    dialogueText.text = npcMessageEasy;
+                    //dialogueText.text = npcMessageEasy;
                     mission = true;
+
+                    string localizedMessage = PlayerPlaygroundEasyMessage.GetLocalizedString();
+                    dialogueText.text = localizedMessage;
                 }
                 else if (selectedGameMode == "MEDIUM")
                 {
-                    dialogueText.text = npcMessageMedium;
+                    //dialogueText.text = npcMessageMedium;
                     mission = true;
+
+                    string localizedMessage = PlayerPlaygroundMediumMessage.GetLocalizedString();
+                    dialogueText.text = localizedMessage;
+
+
                 }
                 else if (selectedGameMode == "HARD")
                 {
-                    dialogueText.text = npcMessageHard;
+                    //dialogueText.text = npcMessageHard;
                     mission = true;
+
+                    string localizedMessage = PlayerPlaygroundHardMessage.GetLocalizedString();
+                    dialogueText.text = localizedMessage;
+
+
                 }
             }
             else

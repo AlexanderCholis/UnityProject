@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
 
 public class Close_Car_Playground_Hard : MonoBehaviour
 {
-    public string npcMessage = "You found the car, keep going!";
+    public LocalizedString CloseCarHard;
+    //public string npcMessage = "You found the car, keep going!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 
@@ -51,7 +53,11 @@ public class Close_Car_Playground_Hard : MonoBehaviour
         {
             if (dialogueText != null)
             {
-                dialogueText.text = npcMessage;
+                //dialogueText.text = npcMessage;
+
+                string localizedMessage = CloseCarHard.GetLocalizedString();
+                dialogueText.text = localizedMessage;
+
                 ScoreManager.instance.AddPointEasyMode();
                 StartCoroutine(HideObjectDelayed(3f)); // Delay for 3 seconds
             }

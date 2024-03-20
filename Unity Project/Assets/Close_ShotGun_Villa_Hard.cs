@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
 
 public class Close_ShotGun_Villa_Hard : MonoBehaviour
 {
-    public string npcMessage = "You found the shotgun, keep going!";
+    public LocalizedString ShotGunHard;
+    //public string npcMessage = "You found the shotgun, keep going!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 
@@ -49,7 +51,11 @@ public class Close_ShotGun_Villa_Hard : MonoBehaviour
         {
             if (dialogueText != null)
             {
-                dialogueText.text = npcMessage;
+                //dialogueText.text = npcMessage;
+
+                string localizedMessage = ShotGunHard.GetLocalizedString();
+                dialogueText.text = localizedMessage;
+
                 ScoreManager.instance.AddPointEasyMode();
 
                 shotgunflag = true;

@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
 
 
 public class Close_Snipper_Villa_Medium : MonoBehaviour
 {
-    public string npcMessage = "You found the sniper, keep going!";
+    public LocalizedString SniperMedium;
+    //public string npcMessage = "You found the sniper, keep going!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 
@@ -51,7 +53,9 @@ public class Close_Snipper_Villa_Medium : MonoBehaviour
         {
             if (dialogueText != null)
             {
-                dialogueText.text = npcMessage;
+                //dialogueText.text = npcMessage;
+                string localizedMessage = SniperMedium.GetLocalizedString();
+                dialogueText.text = localizedMessage;
                 ScoreManager.instance.AddPointEasyMode();
 
                 //sniperflag = true;

@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
 
 public class Close_ParkingSign : MonoBehaviour
 {
-    public string npcMessage = "You found the parking sign, keep going!"; // Corrected typo in "Hint"
+    public LocalizedString CloseSignPEasy;
+   // public string npcMessage = "You found the parking sign, keep going!"; // Corrected typo in "Hint"
 
     public Canvas dialogueCanvas;
     private TextMeshProUGUI dialogueText;
@@ -74,7 +76,11 @@ public class Close_ParkingSign : MonoBehaviour
             {*/
                 if (dialogueText != null)
                 {
-                    dialogueText.text = npcMessage;
+                //dialogueText.text = npcMessage;
+
+                    string localizedMessage = CloseSignPEasy.GetLocalizedString();
+                    dialogueText.text = localizedMessage;
+
                     ScoreManager.instance.AddPointEasyMode();
                     StartCoroutine(HideObjectDelayed(3f)); // Delay for 3 seconds
                 }

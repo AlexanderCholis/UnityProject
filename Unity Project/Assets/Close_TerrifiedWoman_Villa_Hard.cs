@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
 
 public class Close_TerrifiedWoman_Villa_Hard : MonoBehaviour
 {
-    public string npcMessage = "There is somewhere hidden the deadly gun. Hint: Ask the man outside the cafeteria for more info!";
+    public LocalizedString WomanHard;
+    //public string npcMessage = "There is somewhere hidden the deadly gun. Hint: Ask the man outside the cafeteria for more info!";
 
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
@@ -34,7 +36,10 @@ public class Close_TerrifiedWoman_Villa_Hard : MonoBehaviour
         {
             if (dialogueText != null)
             {
-                dialogueText.text = npcMessage;
+                //dialogueText.text = npcMessage;
+                string localizedMessage = WomanHard.GetLocalizedString();
+                dialogueText.text = localizedMessage;
+
                 womanflag = true;
             }
             else

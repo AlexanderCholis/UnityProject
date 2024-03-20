@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
 
 public class Close_Hammer_Playground : MonoBehaviour
 {
-    public string npcMessage = "You found the hammer, keep going!";
+    public LocalizedString CloseHammerPEasy;
+    //public string npcMessage = "You found the hammer, keep going!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 
@@ -52,7 +54,11 @@ public class Close_Hammer_Playground : MonoBehaviour
         {
             if (dialogueText != null)
             {
-                dialogueText.text = npcMessage;
+                //dialogueText.text = npcMessage;
+
+                string localizedMessage = CloseHammerPEasy.GetLocalizedString();
+                dialogueText.text = localizedMessage;
+
                 ScoreManager.instance.AddPointEasyMode();
                 StartCoroutine(HideObjectDelayed(3f)); // Delay for 3 seconds
             }
