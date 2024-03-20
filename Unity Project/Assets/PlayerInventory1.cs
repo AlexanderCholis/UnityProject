@@ -11,12 +11,12 @@ public class PlayerInventory1 : MonoBehaviour
         private set;
     }
 
-    public UnityEvent<PlayerInventory1> onDiamondCollected = new UnityEvent<PlayerInventory1>(); // Initialize UnityEvent
+    public UnityEvent<PlayerInventory1> onDiamondsCollected = new UnityEvent<PlayerInventory1>(); // Initialize UnityEvent
 
     public void DiamondsCollected()
     {
         NumberOfDiamonds++;
-        onDiamondCollected.Invoke(this);
+        onDiamondsCollected.Invoke(this);
     }
 
 }
