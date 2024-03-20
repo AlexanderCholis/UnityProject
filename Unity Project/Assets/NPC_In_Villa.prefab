@@ -209,8 +209,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
+  m_sharedMaterial: {fileID: 2164040, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -395,17 +395,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9168c886ea4031f4bb2aec845c0f5b07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcMessageEasy: Hello Player
-  npcMessageMedium: "Hello there, you have been assigned a very important role.\nYou
-    are a detective investigating a murder case. Search the house and collect the
-    \n7 objects that incriminate him.The objects are scattered in the different areasof
-    the house.\nHint: We have testimonies that there may be a female captive.\nBe
-    careful and good luck"
-  npcMessageHard: "Hello there, you have been assigned a very important role.\nYou
-    are a detective investigating a murder case. Search the house and collect the
-    \n6 objects that incriminate him.The objects are scattered in the different areasof
-    the house.\nHint: We have testimonies that there may be a female captive.\nBe
-    careful and good luck"
+  PlayerVillaMediumMessage:
+    m_TableReference:
+      m_TableCollectionName: GUID:e7e293edbd316944b870ba9b4e66c5c3
+    m_TableEntryReference:
+      m_KeyId: 1201733399781376
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  PLayerVillaHardMessage:
+    m_TableReference:
+      m_TableCollectionName: GUID:e7e293edbd316944b870ba9b4e66c5c3
+    m_TableEntryReference:
+      m_KeyId: 1201773430218752
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   dialogueCanvas: {fileID: 6391175519315725627}
   BlackGun: {fileID: 0}
   RustyKnife: {fileID: 0}
@@ -423,6 +430,9 @@ MonoBehaviour:
   ShotGun: {fileID: 0}
   RustyKnife1: {fileID: 0}
   TerrifiedWoman1: {fileID: 0}
+  references:
+    version: 2
+    RefIds: []
 --- !u!1001 &1871526188863536699
 PrefabInstance:
   m_ObjectHideFlags: 0

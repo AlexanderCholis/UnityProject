@@ -469,6 +469,10 @@ MonoBehaviour:
     m_Key: ManResidenceMessage
     m_Metadata:
       m_Items: []
+  - m_Id: 400418314264576
+    m_Key: New Entry 1
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
