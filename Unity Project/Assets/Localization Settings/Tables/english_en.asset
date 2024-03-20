@@ -520,6 +520,10 @@ MonoBehaviour:
       to your next mission located in the parking garage.
     m_Metadata:
       m_Items: []
+  - m_Id: 1478136385019904
+    m_Localized: "HINT: You should better look in the bedrooms!\n    "
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

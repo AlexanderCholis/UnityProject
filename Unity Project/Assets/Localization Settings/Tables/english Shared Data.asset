@@ -461,6 +461,10 @@ MonoBehaviour:
     m_Key: StudentSchoolMessage
     m_Metadata:
       m_Items: []
+  - m_Id: 1478136385019904
+    m_Key: Hint
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
