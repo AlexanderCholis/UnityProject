@@ -10,7 +10,7 @@ public class Coins : MonoBehaviour
 
         if (playerInventory != null)
         {
-            playerInventory.CoinsCollected(); // Corrected method name here
+            playerInventory.CoinsCollected(); 
             gameObject.SetActive(false);
         }
     }

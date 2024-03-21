@@ -51,7 +51,6 @@ public class InventoryUI : MonoBehaviour
                 ShowMessage();
             }
         }
-
     }
 
     // Corrected method declaration
