@@ -16,12 +16,6 @@ public class MainMenu : MonoBehaviour
     public static string selectedGameMode;
 
 
-    public GameObject mainmenu;
-    public GameObject optionsmenu;
-    public GameObject helpmenu;
-    public GameObject controlsmenu;
-    public GameObject playerpurpose;
-
 
     public void PlayGame()
     {
@@ -51,7 +45,7 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.SetString(GameModeKey, selectedGameMode);
         PlayerPrefs.Save();
 
-        SceneManager.LoadScene(2);       
+        SceneManager.LoadScene(2);
     }
 
     public void MediumMode()
@@ -70,31 +64,6 @@ public class MainMenu : MonoBehaviour
         PlayerPrefs.Save();
 
         SceneManager.LoadScene(2);
-    }
-
-    public void HelpBtn()
-    {
-       mainmenu.SetActive(false); // Hide the object to hide
-       helpmenu.SetActive(true); // Show the object to show
-
-    }
-
-    public void OptionsBtn()
-    {
-        mainmenu.SetActive(false); // Hide the object to hide
-        optionsmenu.SetActive(true); // Show the object to show
-    }
-    public void GameControl()
-    {
-        helpmenu.SetActive(false); // Hide the object to hide
-        controlsmenu.SetActive(true); // Show the object to show
-
-    }
-
-    public void PlayerPurpose()
-    {
-        helpmenu.SetActive(false); // hide the object to hide
-        playerpurpose.SetActive(true);
     }
 
     void Awake()
@@ -124,4 +93,3 @@ public class MainMenu : MonoBehaviour
         }
     }
 }
-

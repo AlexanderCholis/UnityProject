@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using UnityEngine.Localization;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    public LocalizedString CloseBlackCarPlaygroundEasy;
-
-    //public string npcMessage = "You found the car, keep going!";
+    public string npcMessage = "You found the car, keep going!";
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
 
@@ -18,13 +15,6 @@ public class NewBehaviourScript : MonoBehaviour
 
     public GameObject BlackCar;
     string numberPart;
-
-    // easy mode objects
-    //public GameObject BlackCar;
-    public GameObject BlackWheel;
-    public GameObject BlackSledgeHammer;
-    public GameObject Parkgarage_sign;
-
 
     void Start()
     {
@@ -61,10 +51,7 @@ public class NewBehaviourScript : MonoBehaviour
         {
             if (dialogueText != null)
             {
-                //dialogueText.text = npcMessage;
-                string localizedMessage =CloseBlackCarPlaygroundEasy.GetLocalizedString();
-                dialogueText.text = localizedMessage;
-
+                dialogueText.text = npcMessage;
                 ScoreManager.instance.AddPointEasyMode();
                 StartCoroutine(HideObjectDelayed(3f)); // Delay for 3 seconds
             }
@@ -94,7 +81,7 @@ public class NewBehaviourScript : MonoBehaviour
     }
 
     // Check the score and display a message when it reaches 3
-    /*void Update()
+    void Update()
     {
         if (scoreText != null)
         {
@@ -120,57 +107,19 @@ public class NewBehaviourScript : MonoBehaviour
         {
         StartCoroutine(ShowDialogueAfterDelay(2f));
         }
-    }*/
+    }
 
 
-    /*IEnumerator ShowDialogueAfterDelay(float delay)
+    IEnumerator ShowDialogueAfterDelay(float delay)
     {
         yield return new WaitForSeconds(delay);
 
-        dialogueText.text = "Congratulations! You found all the hidden objects.\n" +
-            "You can now continue to your next mission" +
+        dialogueText.text = "Congratulations! You can now continue to your next mission" +
             "\n located in the parking garage!";
         dialogueCanvas.enabled = true;
 
-        yield return new WaitForSeconds(4f); // Wait for 3 seconds
+        yield return new WaitForSeconds(3f); // Wait for 3 seconds
 
         dialogueCanvas.enabled = false; // Hide the dialogue canvas
     }
-
-    void Update()
-    {
-        if (scoreText != null)
-        {
-            // Split the score text and store the parts in the array
-            parts = scoreText.text.Split(' ');
-
-            if (parts.Length > 0)
-            {
-                numberPart = parts[0]; // Get the first part
-                //print("Score Number: " + numberPart);
-            }
-            else
-            {
-                Debug.LogError("Invalid points string format!");
-            }
-        }
-        else
-        {
-            Debug.LogError("Score text is not assigned!");
-        }
-
-        if (!BlackCar.activeSelf && !BlackWheel.activeSelf && !BlackSledgeHammer.activeSelf &&
-            !Parkgarage_sign.activeSelf)
-            Debug.Log("All easy mode hidden!!!!!");
-
-
-        if (/*!BlackCar.activeSelf && !BlackWheel.activeSelf && !BlackSledgeHammer.activeSelf &&
-            !Parkgarage_sign.activeSelf && numberPart == "4")
-        {
-            Debug.Log("All easy mode hidden" + numberPart);
-            StartCoroutine(ShowDialogueAfterDelay(2f));*/
-            //dialogueText.text = "You found all the hidden objects";
-            //dialogueCanvas.enabled = true;
-       // }
-   // }*/
 }

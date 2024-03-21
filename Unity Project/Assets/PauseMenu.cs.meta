@@ -3,13 +3,7 @@ guid: e3f3d8ab1158bc44a9cd594a039c43b6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - pauseMenuUI: {instanceID: 0}
-  - canvas: {instanceID: 0}
-  - imagePanel: {instanceID: 0}
-  - townmapEasy: {fileID: 21300000, guid: d178a36913734de4a93c7a0873925496, type: 3}
-  - townmapMedium: {fileID: 21300000, guid: ee37953b003d4fc4ea4c7df4fe340a43, type: 3}
-  - townmapHard: {fileID: 21300000, guid: 8a58383097833ff4bb0e7c7a97a3dd8d, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

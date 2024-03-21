@@ -12,8 +12,7 @@ public class PlayerInvCoins : MonoBehaviour
         private set;
     }
 
-    public UnityEvent<PlayerInvCoins> onCoinsCollected = new UnityEvent<PlayerInvCoins>(); // Initialize UnityEvent
-
+    public UnityEvent<PlayerInvCoins> onCoinsCollected = new UnityEvent<PlayerInvCoins>(); 
     public void CoinsCollected()
     {
         NumberOfCoins++;

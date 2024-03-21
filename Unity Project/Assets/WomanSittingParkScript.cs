@@ -15,6 +15,12 @@ public class WomanSittingParkScript : MonoBehaviour
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
     public GameObject Gems;
+    public GameObject Gems2;
+    public GameObject Gems3;
+
+    public static string selectedGameMode;
+
+    private const string GameModeKey = "GameMode";
 
     void Start()
     {
@@ -30,28 +36,83 @@ public class WomanSittingParkScript : MonoBehaviour
         {
             dialogueCanvas.enabled = false;
         }
+
+        selectedGameMode= PlayerPrefs.GetString(GameModeKey);
+        Debug.Log("GameMode:" + selectedGameMode);
+
+        
     }
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+
+        if (selectedGameMode == "EASY")
         {
-            if (dialogueText != null)
+
+            if (other.CompareTag("Player"))
             {
-                dialogueText.text = npcMessage;
-                Gems.SetActive(true);
+                if (dialogueText != null)
+                {
+                    dialogueText.text = npcMessage;
+                    Gems.SetActive(true);
+                }
+                else
+                {
+                    Debug.LogError("Text component not found in the Canvas!");
+                }
+
+                dialogueCanvas.enabled = true;
             }
             else
             {
-                Debug.LogError("Text component not found in the Canvas!");
+                Debug.LogError("Error on trigger enter");
             }
-
-            dialogueCanvas.enabled = true;
         }
-        else
+        else if (selectedGameMode == "MEDIUM")
         {
-            Debug.LogError("Error on trigger enter");
+
+            if (other.CompareTag("Player"))
+            {
+                if (dialogueText != null)
+                {
+                    dialogueText.text = npcMessage;
+                    Gems2.SetActive(true);
+                }
+                else
+                {
+                    Debug.LogError("Text component not found in the Canvas!");
+                }
+
+                dialogueCanvas.enabled = true;
+            }
+            else
+            {
+                Debug.LogError("Error on trigger enter");
+            }
         }
+       else if (selectedGameMode == "HARD")
+        {
+
+            if (other.CompareTag("Player"))
+            {
+                if (dialogueText != null)
+                {
+                    dialogueText.text = npcMessage;
+                    Gems3.SetActive(true);
+                }
+                else
+                {
+                    Debug.LogError("Text component not found in the Canvas!");
+                }
+
+                dialogueCanvas.enabled = true;
+            }
+            else
+            {
+                Debug.LogError("Error on trigger enter");
+            }
+        }
+
     }
 
     void OnTriggerExit(Collider other)
