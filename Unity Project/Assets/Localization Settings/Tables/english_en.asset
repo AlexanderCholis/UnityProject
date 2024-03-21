@@ -529,6 +529,167 @@ MonoBehaviour:
       the murderer.
     m_Metadata:
       m_Items: []
+  - m_Id: 1954701769842688
+    m_Localized: How many residents are in the park?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1955242361102336
+    m_Localized: 3 adults and 1 kids
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1955556296368128
+    m_Localized: 2 adults and 2 kids
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1955662273847296
+    m_Localized: 1 adults and 1 kid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1956063152840704
+    m_Localized: 4 adults
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1956323610730496
+    m_Localized: How many of them are females/female?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1956338164965376
+    m_Localized: What is the flower of International Day of Woman?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1956417143709696
+    m_Localized: Mimosa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1956431005884416
+    m_Localized: Rose
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1956442078846976
+    m_Localized: Orchid
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1959123279290368
+    m_Localized: Sunflower
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1959360421044224
+    m_Localized: How many diamonds did you collected?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1959554676039680
+    m_Localized: What color were the diamonds?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1959665967702016
+    m_Localized: Sky blue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1959742513750016
+    m_Localized: Turquoise
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1959779180355584
+    m_Localized: 'Navy blue '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1959877595504640
+    m_Localized: Royal blue
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1960139471069184
+    m_Localized: How diamonds measured in terms?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1960269544824832
+    m_Localized: Karats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1960347898617856
+    m_Localized: Grams
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1960390038790144
+    m_Localized: Ounces
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1960412998410240
+    m_Localized: Carats
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1961063111335936
+    m_Localized: What gives diamods their sparkle?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1961096980340736
+    m_Localized: Transparency
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1961548128067584
+    m_Localized: Color
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1961584517849088
+    m_Localized: Cut and polish
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1961615476006912
+    m_Localized: Inclusions
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1961875506077696
+    m_Localized: What is the traditional birthstone for April?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1961924482965504
+    m_Localized: 'Sapphire '
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1962009623142400
+    m_Localized: Emerald
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1962016841539584
+    m_Localized: Ruby
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1962183120527360
+    m_Localized: Diamond
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1963146044645376
+    m_Localized: Where are most diamonds formed?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1963170992365568
+    m_Localized: Earth's crust
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1963216735444992
+    m_Localized: Oceans
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1963231004467200
+    m_Localized: Earth's mantle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1963252806459392
+    m_Localized: Volcanic vents
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1965768680022016
+    m_Localized: "Congratulations, you made it to the 3\u03C1d mission. To continue,
+      answer the questions of the quiz."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1967437312565248
+    m_Localized: 'YOUR SCORE IN PARK''S QUIZ:'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1967551808675840
+    m_Localized: Step Away to end the Quiz
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
