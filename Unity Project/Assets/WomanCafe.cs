@@ -42,7 +42,7 @@ public class WomanCafe : MonoBehaviour
     {
         selectedGameMode = PlayerPrefs.GetString(GameModeKey);
 
-        if (selectedGameMode == "HARD" && other.CompareTag("Player"))
+        if (selectedGameMode == "MEDIUM" && other.CompareTag("Player"))
         {
             string localizedMessage = WomanCafeMessage.GetLocalizedString();
             dialogueText.text = localizedMessage;

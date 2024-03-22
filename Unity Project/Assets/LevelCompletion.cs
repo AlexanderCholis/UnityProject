@@ -15,6 +15,7 @@ public class LevelCompletion : MonoBehaviour
 
     public static string selectedGameMode;
     private const string GameModeKey = "GameMode";
+    private const float delay = 5f;
 
     // Start is called before the first frame update
     void Start()
@@ -48,8 +49,12 @@ public class LevelCompletion : MonoBehaviour
             message = hardCompletionText;
         }
 
+        Invoke("DisplayCompletionText", delay);
+    }
+
+    private void DisplayCompletionText()
+    {
         // Display the completion message
-        completionText.text = message;
         completionText.gameObject.SetActive(true);
     }
 }
