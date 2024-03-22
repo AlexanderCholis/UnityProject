@@ -700,6 +700,20 @@ MonoBehaviour:
       an offer for coffee and a piece of pie at $2.58.
     m_Metadata:
       m_Items: []
+  - m_Id: 2302163793616896
+    m_Localized: 'Welcome to the park!
+
+      Your first mission is to collect all
+      the diamonds around the park, so you can answer this question: How many are
+      the residents of the city?'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2304608280125440
+    m_Localized: You've collected all diamonds! The residents of this city are 49.
+      Your next mission is to find the lady who is around the perimeter of the park,
+      she will talk to you when you get next to her.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

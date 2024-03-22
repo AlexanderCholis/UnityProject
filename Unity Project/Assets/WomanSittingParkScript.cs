@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Localization;
+
 
 public class WomanSittingParkScript : MonoBehaviour
 
 {
-
-    public string npcMessage = "Welcome to the park! \n" +
+    public LocalizedString WomanSittingParkMessage;
+    /*public string npcMessage = "Welcome to the park! \n" +
         "Your first mission is to collect all the diamonds around the park,\n" +
         "so you can answer this question:\n" +
         "How many are the residents of the city? ";
+    */
     public Canvas dialogueCanvas; // Link this in the Unity Editor
     private TextMeshProUGUI dialogueText;
     public GameObject Gems;
@@ -45,6 +48,7 @@ public class WomanSittingParkScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+        selectedGameMode = PlayerPrefs.GetString(GameModeKey);
 
         if (selectedGameMode == "EASY")
         {
@@ -53,7 +57,9 @@ public class WomanSittingParkScript : MonoBehaviour
             {
                 if (dialogueText != null)
                 {
-                    dialogueText.text = npcMessage;
+                    string localizedMessage = WomanSittingParkMessage.GetLocalizedString();
+                    dialogueText.text = localizedMessage;
+                    //dialogueText.text = npcMessage;
                     Gems.SetActive(true);
                 }
                 else
@@ -75,7 +81,9 @@ public class WomanSittingParkScript : MonoBehaviour
             {
                 if (dialogueText != null)
                 {
-                    dialogueText.text = npcMessage;
+                    string localizedMessage = WomanSittingParkMessage.GetLocalizedString();
+                    dialogueText.text = localizedMessage;
+                    //dialogueText.text = npcMessage;
                     Gems2.SetActive(true);
                 }
                 else
@@ -97,7 +105,9 @@ public class WomanSittingParkScript : MonoBehaviour
             {
                 if (dialogueText != null)
                 {
-                    dialogueText.text = npcMessage;
+                    string localizedMessage = WomanSittingParkMessage.GetLocalizedString();
+                    dialogueText.text = localizedMessage;
+                    //dialogueText.text = npcMessage;
                     Gems3.SetActive(true);
                 }
                 else
