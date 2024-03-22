@@ -6,7 +6,6 @@ using TMPro;
 using UnityEngine.Localization;
 
 
-
 public class ManInsideSchool : MonoBehaviour
 {
     public LocalizedString ManSchoolMediumMessage;

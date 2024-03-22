@@ -690,6 +690,16 @@ MonoBehaviour:
     m_Localized: Step Away to end the Quiz
     m_Metadata:
       m_Items: []
+  - m_Id: 2248659666345984
+    m_Localized: Hey! How are you? Last time at your home I think I accidentally
+      threw a box of playing cards in the trash. Can you look for it?
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2255357076447232
+    m_Localized: Hello Sir! You want your usual coffee, right? Today we also have
+      an offer for coffee and a piece of pie at $2.58.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

@@ -633,6 +633,14 @@ MonoBehaviour:
     m_Key: ParkQuizScorePart2
     m_Metadata:
       m_Items: []
+  - m_Id: 2248659666345984
+    m_Key: ManStandingCafeMessage
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2255357076447232
+    m_Key: WomanCafeMessage
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
