@@ -17,7 +17,7 @@ public class Manager : MonoBehaviour
 
     //Variable to store the last clicked button
     public static string selectedGameMode;
-    
+
     private const string GameModeKey = "GameMode";
 
     public LocalizedString score1LocalizationString;
@@ -51,7 +51,7 @@ public class Manager : MonoBehaviour
     {
         selectedGameMode = PlayerPrefs.GetString(GameModeKey);
 
-        if (selectedGameMode == "EASY" && currentLevel < 3)
+        if (selectedGameMode == "EASY" && currentLevel < 4)
         {
             Levels[currentLevel].SetActive(false);
             Score++;
@@ -59,13 +59,13 @@ public class Manager : MonoBehaviour
             currentLevel++;
             Levels[currentLevel].SetActive(true);
         }
-        else if (selectedGameMode == "EASY" && currentLevel == 3)
+        else if (selectedGameMode == "EASY" && currentLevel == 4)
         {
             Levels[currentLevel].SetActive(false); // Deactivate last level
             GameOver();
-            Levels[10].SetActive(true); // Activate Level 11 to display score
+            Levels[11].SetActive(true); // Activate Level 11 to display score
         }
-        else if (selectedGameMode == "MEDIUM" && currentLevel < 6)
+        else if (selectedGameMode == "MEDIUM" && currentLevel < 7)
         {
             Levels[currentLevel].SetActive(false);
             Score++;
@@ -73,13 +73,13 @@ public class Manager : MonoBehaviour
             currentLevel++;
             Levels[currentLevel].SetActive(true);
         }
-        else if (selectedGameMode == "MEDIUM" && currentLevel == 6)
+        else if (selectedGameMode == "MEDIUM" && currentLevel == 7)
         {
             Levels[currentLevel].SetActive(false); // Deactivate last level
-            GameOver(); 
-            Levels[10].SetActive(true); // Activate Level 11 to display score
+            GameOver();
+            Levels[11].SetActive(true); // Activate Level 11 to display score
         }
-        else if (selectedGameMode == "HARD" && currentLevel < 9)
+        else if (selectedGameMode == "HARD" && currentLevel < 10)
         {
             Levels[currentLevel].SetActive(false);
             Score++;
@@ -87,11 +87,11 @@ public class Manager : MonoBehaviour
             currentLevel++;
             Levels[currentLevel].SetActive(true);
         }
-        else if (selectedGameMode == "HARD" && currentLevel == 9)
+        else if (selectedGameMode == "HARD" && currentLevel == 10)
         {
             Levels[currentLevel].SetActive(false); // Deactivate last level
             //GameOver();
-            Levels[10].SetActive(true); // Activate Level 11 to display score
+            Levels[11].SetActive(true); // Activate Level 11 to display score
         }
     }
 
@@ -99,49 +99,49 @@ public class Manager : MonoBehaviour
     {
         selectedGameMode = PlayerPrefs.GetString(GameModeKey);
 
-        if (selectedGameMode == "EASY" && currentLevel < 3)
+        if (selectedGameMode == "EASY" && currentLevel < 4)
         {
             Levels[currentLevel].SetActive(false);
             currentLevel++;
             Levels[currentLevel].SetActive(true);
         }
-        else if (selectedGameMode == "EASY" && currentLevel == 3)
+        else if (selectedGameMode == "EASY" && currentLevel == 4)
         {
             Levels[currentLevel].SetActive(false); // Deactivate last level
             GameOver();
-            Levels[10].SetActive(true); // Activate Level 11 to display score
+            Levels[11].SetActive(true); // Activate Level 11 to display score
         }
-        else if (selectedGameMode == "MEDIUM" && currentLevel < 6)
+        else if (selectedGameMode == "MEDIUM" && currentLevel < 7)
         {
             Levels[currentLevel].SetActive(false);
             currentLevel++;
             Levels[currentLevel].SetActive(true);
         }
-        else if (selectedGameMode == "MEDIUM" && currentLevel == 6)
+        else if (selectedGameMode == "MEDIUM" && currentLevel == 7)
         {
             Levels[currentLevel].SetActive(false); // Deactivate last level
-            GameOver(); 
-            Levels[10].SetActive(true); // Activate Level 11 to display score
+            GameOver();
+            Levels[11].SetActive(true); // Activate Level 11 to display score
         }
-        else if (selectedGameMode == "HARD" && currentLevel < 9)
+        else if (selectedGameMode == "HARD" && currentLevel < 10)
         {
             Levels[currentLevel].SetActive(false);
             currentLevel++;
             Levels[currentLevel].SetActive(true);
         }
-        else if (selectedGameMode == "HARD" && currentLevel == 9)
+        else if (selectedGameMode == "HARD" && currentLevel == 10)
         {
             Levels[currentLevel].SetActive(false); // Deactivate last level
             //GameOver();
-            Levels[10].SetActive(true); // Activate Level 11 to display score
+            Levels[11].SetActive(true); // Activate Level 11 to display score
         }
     }
 
     public void StartQuiz()
     {
-        
+
         selectedGameMode = PlayerPrefs.GetString(GameModeKey);
-        Debug.Log("Gamemode: " +  selectedGameMode);
+        Debug.Log("Gamemode: " + selectedGameMode);
 
         // depending on the mode show and hide the nessesary questions
         if (selectedGameMode == "EASY")
@@ -154,7 +154,8 @@ public class Manager : MonoBehaviour
             Levels[1].SetActive(true);
             Levels[2].SetActive(true);
             Levels[3].SetActive(true);
-            Levels[10].SetActive(false); //score
+            Levels[4].SetActive(true);
+            Levels[11].SetActive(false); //score
 
 
             // Deactivate the intro page or any other UI elements
@@ -179,7 +180,8 @@ public class Manager : MonoBehaviour
             Levels[4].SetActive(true);
             Levels[5].SetActive(true);
             Levels[6].SetActive(true);
-            Levels[10].SetActive(false);
+            Levels[7].SetActive(true);
+            Levels[11].SetActive(false);
 
 
             // Deactivate the intro page or any other UI elements
@@ -206,7 +208,8 @@ public class Manager : MonoBehaviour
             Levels[7].SetActive(true);
             Levels[8].SetActive(true);
             Levels[9].SetActive(true);
-            Levels[10].SetActive(false);
+            Levels[10].SetActive(true);
+            Levels[11].SetActive(false);
 
 
             // Deactivate the intro page or any other UI elements
@@ -216,7 +219,7 @@ public class Manager : MonoBehaviour
             Score = 0;
             currentLevel = 0;
         }
-        
+
         /*
         // Activate the first level
         Levels[0].SetActive(false);
@@ -243,7 +246,7 @@ public class Manager : MonoBehaviour
         */
     }
 
-    public void GameOver() 
+    public void GameOver()
     {
 
         string localizedScoreText = score1LocalizationString.GetLocalizedString() + " " + Score;

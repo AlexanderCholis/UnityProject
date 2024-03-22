@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Localization;
 
-public class Manager : MonoBehaviour
+public class Manager2 : MonoBehaviour
 {
     public GameObject[] Levels;
 
