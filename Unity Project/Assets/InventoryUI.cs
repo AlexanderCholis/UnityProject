@@ -2,12 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.Localization;
 
 public class InventoryUI : MonoBehaviour
 {
     private TextMeshProUGUI diamondText;
-    public string Message = "You've collected all diamonds! The residents of this city are 49.\n" +
+    /*public string Message = "You've collected all diamonds! The residents of this city are 49.\n" +
         "Your next mission is to find the lady who is around the perimeter of the park, she will talk to you when you get next to her.";
+   */
+    public LocalizedString MessageEasy;
+    public LocalizedString MessageMedium;
+    public LocalizedString MessageHard;
+
     private TextMeshProUGUI missionText;
     public static string selectedGameMode;
 
@@ -32,7 +38,8 @@ public class InventoryUI : MonoBehaviour
 
             if (playerInventory.NumberOfDiamonds == 49)
             {
-                ShowMessage();
+                string localizedMessage = MessageEasy.GetLocalizedString();
+                missionText.text = localizedMessage;
             }
         }
         else if (selectedGameMode == "MEDIUM")
@@ -40,7 +47,8 @@ public class InventoryUI : MonoBehaviour
 
             if (playerInventory.NumberOfDiamonds == 7)
             {
-                ShowMessage();
+                string localizedMessage = MessageMedium.GetLocalizedString();
+                missionText.text = localizedMessage;
             }
         }
         else if (selectedGameMode == "HARD")
@@ -48,28 +56,29 @@ public class InventoryUI : MonoBehaviour
 
             if (playerInventory.NumberOfDiamonds == 4)
             {
-                ShowMessage();
+                string localizedMessage = MessageHard.GetLocalizedString();
+                missionText.text = localizedMessage;
             }
         }
     }
 
-    // Corrected method declaration
-    private void ShowMessage()
+
+    /*private void ShowMessage()
     {
         if (selectedGameMode == "EASY")
         {
-            Debug.Log("You've collected all diamonds! The residents of this city are 49.");
+            Message = "You've collected all diamonds! The residents of this city are 49." + "\n Your next mission is to find the lady who is around the perimeter of the park, she will talk to you when you get next to her.";
             missionText.text = Message;
         }
         else if (selectedGameMode == "MEDIUM")
         {
-            Debug.Log("You've collected all diamonds! The residents of this city are 49 (diamonds*7).");
+            Message = "You've collected all diamonds! The residents of this city are 49 (diamonds*7)." + "\n Your next mission is to find the lady who is around the perimeter of the park, she will talk to you when you get next to her.";
             missionText.text = Message;
         }
         else if (selectedGameMode == "HARD")
         {
-            Debug.Log("You've collected all diamonds! The residents of this city are 49 [(diamonds+3)*7].");
+            Message = "You've collected all diamonds! The residents of this city are 49 [(diamonds+3)*7]." + "\n Your next mission is to find the lady who is around the perimeter of the park, she will talk to you when you get next to her.";
             missionText.text = Message;
         }
-    }
+    }*/
 }

@@ -507,12 +507,12 @@ MonoBehaviour:
       m_Items: []
   - m_Id: 1208213817565184
     m_Localized: You have successfully found all the evidence that incriminates him.
-      You can continue to your next mission..
+      You have reached the end of the game. Go to the menu to choose how to continue.
     m_Metadata:
       m_Items: []
   - m_Id: 1208216447393792
     m_Localized: You have successfully found all the evidence that incriminates him.
-      You can continue to your next mission..
+      You have reached the end of the game. Go to the menu to choose how to continue.
     m_Metadata:
       m_Items: []
   - m_Id: 1207037432733696
@@ -712,6 +712,24 @@ MonoBehaviour:
     m_Localized: You've collected all diamonds! The residents of this city are 49.
       Your next mission is to find the lady who is around the perimeter of the park,
       she will talk to you when you get next to her.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2629375952986112
+    m_Localized: You've collected all diamonds! The residents of this city are 49.
+      Your next mission is to find the lady who is around the perimeter of the park,
+      she will talk to you when you get next to her.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2629441426071552
+    m_Localized: "You've collected all diamonds! The residents of this city are 49
+      (diamonds*7). Your next mission is to find the lady who is around the perimeter
+      of the park, she will talk to you when you get next to her.\r\n         "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2629481934659584
+    m_Localized: You've collected all diamonds! The residents of this city are 49
+      [(diamonds+3)*7]. Your next mission is to find the lady who is around the perimeter
+      of the park, she will talk to you when you get next to her.
     m_Metadata:
       m_Items: []
   references:
