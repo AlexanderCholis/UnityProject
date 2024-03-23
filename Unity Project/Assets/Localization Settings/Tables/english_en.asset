@@ -732,6 +732,11 @@ MonoBehaviour:
       of the park, she will talk to you when you get next to her.
     m_Metadata:
       m_Items: []
+  - m_Id: 2649908077699072
+    m_Localized: You have reached the end of the game. Go to the menu to choose how
+      to continue.
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

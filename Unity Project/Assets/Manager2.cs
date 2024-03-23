@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Localization;
+using TMPro;
 
 public class Manager2 : MonoBehaviour
 {
@@ -14,6 +15,11 @@ public class Manager2 : MonoBehaviour
     int currentLevel;
 
     public int Score;
+
+    public Canvas dialogueCanvas; // Link this in the Unity Editor
+    private TextMeshProUGUI dialogueText;
+
+    public LocalizedString finishEasy;
 
     //Variable to store the last clicked button
     public static string selectedGameMode;
@@ -243,7 +249,7 @@ public class Manager2 : MonoBehaviour
         */
     }
 
-    public void GameOver2() 
+    public void GameOver2()
     {
 
         string localizedScoreText = score1LocalizationString.GetLocalizedString() + " " + Score;
@@ -252,9 +258,22 @@ public class Manager2 : MonoBehaviour
 
         ScoreText.text = localizedScoreText + "\n" + localizedContinueText;
 
-        //ScoreText.text = "YOUR SCORE IN PARKING'S QUIZ: \n" + Score + " \n Step Away to end the Quiz and continue to level 3 in the main park";
-        //for Medium Level: ScoreText.text = "YOUR SCORE IN PARKING'S QUIZ: \n" + Score + "/6" + " \n Step Away to end the Quiz and continue to level 3 in the main park";
+        if (selectedGameMode == "EASY")
+        {
+            dialogueText = dialogueCanvas.transform.Find("Text").GetComponent<TextMeshProUGUI>();
+
+            if (dialogueText == null)
+            {
+                Debug.LogError("Text component not found in the Canvas!");
+            }
+            else
+            {
+                dialogueCanvas.enabled = false;
+            }
+
+            string localizedMessage = finishEasy.GetLocalizedString();
+            dialogueText.text = localizedMessage;
+
+        }
     }
-
-
 }
