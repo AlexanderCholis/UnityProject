@@ -256,24 +256,11 @@ public class Manager2 : MonoBehaviour
 
         string localizedContinueText = score2LocalizationString.GetLocalizedString();
 
-        ScoreText.text = localizedScoreText + "\n" + localizedContinueText;
+        string localizedFinishEasy = finishEasy.GetLocalizedString();
 
-        if (selectedGameMode == "EASY")
-        {
-            dialogueText = dialogueCanvas.transform.Find("Text").GetComponent<TextMeshProUGUI>();
-
-            if (dialogueText == null)
-            {
-                Debug.LogError("Text component not found in the Canvas!");
-            }
-            else
-            {
-                dialogueCanvas.enabled = false;
-            }
-
-            string localizedMessage = finishEasy.GetLocalizedString();
-            dialogueText.text = localizedMessage;
-
-        }
+        if (selectedGameMode != "EASY")
+            ScoreText.text = localizedScoreText + "\n" + localizedContinueText;
+        else if (selectedGameMode == "EASY")
+            ScoreText.text = localizedScoreText + "\n" + localizedContinueText + "\n" + localizedFinishEasy ;
     }
 }
